@@ -1,0 +1,51 @@
+image: gradle:6.8.3-jdk11
+
+# Disable the Gradle daemon for Continuous Integration servers as correctness
+# is usually a priority over speed in CI environments. Using a fresh
+# runtime for each build is more reliable since the runtime is completely
+# isolated from any previous builds.
+variables:
+  DOCKER_DRIVER: overlay2
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+  CI_SHORT_COMMIT_SHA: '$${CI_COMMIT_SHA:0:8}'
+  IMAGE_NAME: "$CI_REGISTRY/$CI_PROJECT_PATH"
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+  - export BUILD_DATE=`date +%Y%m%d-%H%M%S`
+  - eval export CI_SHORT_COMMIT_SHA=${CI_SHORT_COMMIT_SHA}
+  - eval export RELEASE_IMAGE_TAG=$BUILD_DATE.$CI_SHORT_COMMIT_SHA
+
+stages:
+  - build
+  - release
+
+build_app:
+  stage: build
+  script: gradle --build-cache assemble
+  artifacts:
+    paths:
+      - build/libs
+    expire_in: 1 hour
+  cache:
+    key: "$CI_PROJECT_NAME"
+    paths:
+      - .gradle/wrapper
+      - .gradle/caches
+
+build_master:
+  image: docker:latest
+  services:
+    - docker:dind
+  stage: release
+  dependencies:
+    - build_app
+  script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker build --pull -t $IMAGE_NAME .
+    - docker tag $IMAGE_NAME $IMAGE_NAME:$RELEASE_IMAGE_TAG
+    - docker tag $IMAGE_NAME $IMAGE_NAME:latest
+    - docker push $IMAGE_NAME:$RELEASE_IMAGE_TAG
+    - docker push $IMAGE_NAME:latest
+  only:
+    - master
