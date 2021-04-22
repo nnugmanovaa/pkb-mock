@@ -16,4 +16,6 @@ public class ConnectorProperties {
     private String username;
     private String password;
     private Duration connectionTimeout;
+    private Duration defaultKeepAlive;
+    private int connectionPoolSize;
 }

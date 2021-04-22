@@ -11,4 +11,6 @@ app:
     url: '${PKB_PROTOCOL:http}://${PKB_HOST:www-test2.1cb.kz}:${PKB_PORT:80}/FCBServices/Service'
     username: '${PKB_USERNAME:7018884245}'
     password: '${PKB_PASSWORD:911031300745}'
-    connection-timeout: ${COID_CONNECTION_TIMEOUT:50s}
+    connection-timeout: ${PKB_CONNECTION_TIMEOUT:60s}
+    connection-pool-size: ${PKB_CONNECTION_POOL_SIZE:30}
+    default-keep-alive: ${PKB_DEFAULT_KEEP_ALIVE:30s}
