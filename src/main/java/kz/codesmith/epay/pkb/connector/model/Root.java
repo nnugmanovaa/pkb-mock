@@ -3,8 +3,10 @@ package kz.codesmith.epay.pkb.connector.model;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Root {
+public class Root implements Serializable {
     @JacksonXmlProperty(localName = "Title")
     private Title title;
 

@@ -1,8 +1,12 @@
-pring:
+spring:
   application:
     name: PKB Connector
   main:
     banner-mode: off
+  redis:
+    host: ${REDIS_HOST:app-cache}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASS:ythUIb6745zZg}
 server:
   servlet:
     context-path: "/api"
@@ -14,3 +18,4 @@ app:
     connection-timeout: ${PKB_CONNECTION_TIMEOUT:60s}
     connection-pool-size: ${PKB_CONNECTION_POOL_SIZE:30}
     default-keep-alive: ${PKB_DEFAULT_KEEP_ALIVE:30s}
+    credit-report-cache-ttl: ${PKB_CREDIT-REPORT-CACHE-TTL:48h}

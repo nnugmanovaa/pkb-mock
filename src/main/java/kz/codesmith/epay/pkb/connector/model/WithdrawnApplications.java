@@ -4,10 +4,11 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Data
-public class WithdrawnApplications {
+public class WithdrawnApplications implements Serializable {
     @JacksonXmlProperty(isAttribute = true)
     private String stitle;
 

@@ -18,4 +18,5 @@ public class ConnectorProperties {
     private Duration connectionTimeout;
     private Duration defaultKeepAlive;
     private int connectionPoolSize;
+    private Duration creditReportCacheTtl;
 }

@@ -3,8 +3,10 @@ package kz.codesmith.epay.pkb.connector.model;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Payment {
+public class Payment implements Serializable {
     @JacksonXmlProperty(localName = "overdue", isAttribute = true)
     private String overdue;
 
