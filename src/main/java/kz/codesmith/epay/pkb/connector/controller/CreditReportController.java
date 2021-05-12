@@ -3,6 +3,7 @@ package kz.codesmith.epay.pkb.connector.controller;
 import kz.codesmith.epay.pkb.connector.model.CigResult;
 import kz.codesmith.epay.pkb.connector.model.OverduePayment;
 import kz.codesmith.epay.pkb.connector.service.CreditReportService;
+import kz.codesmith.logger.Logged;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Slf4j
+@Logged
 @Validated
 @RestController
 @RequiredArgsConstructor

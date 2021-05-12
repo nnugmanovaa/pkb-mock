@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'kz.codesmith.epay'
-version = '0.0.1'
+version = '0.0.2'
 sourceCompatibility = '11'
 
 configurations {
@@ -16,6 +16,26 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven {
+		url "https://gitlab.com/api/v4/groups/10014540/-/packages/maven"
+		name "GitLab"
+		def jobToken = System.getenv("CI_JOB_TOKEN")
+		if (jobToken != null) {
+			credentials(HttpHeaderCredentials) {
+				name = 'Job-Token'
+				value = jobToken
+			}
+		} else {
+			credentials(HttpHeaderCredentials) {
+				name = 'Private-Token'
+				value = gitLabPrivateToken
+			}
+		}
+
+		authentication {
+			header(HttpHeaderAuthentication)
+		}
+	}
 }
 
 dependencies {
@@ -23,6 +43,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-cache'
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'kz.codesmith:lib-spring-aop-logger:1.0.1.RELEASE'
 
 	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.11.1'
 	implementation 'org.apache.httpcomponents:httpclient:4.5.13'

@@ -9,4 +9,7 @@ import java.io.Serializable;
 public class GetReportResult implements Serializable {
     @JacksonXmlProperty(localName = "CigResult")
     private CigResult cigResult;
+
+    @JacksonXmlProperty(localName = "CigResultError")
+    private CigResultError cigResultError;
 }

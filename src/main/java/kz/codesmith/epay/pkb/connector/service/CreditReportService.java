@@ -28,7 +28,11 @@ public class CreditReportService {
     }
 
     @SneakyThrows
-    @Cacheable(value = CACHE_NAME, key = "{#iin, #creditReportId}", unless = "#result == null || #result.result == null")
+    @Cacheable(
+            value = CACHE_NAME,
+            key = "{#iin, #creditReportId}",
+            unless = "#result == null || #result.result == null"
+    )
     public CigResult getCreditReportParsed(String iin, String creditReportId) {
         var report = getCreditReportRaw(iin, creditReportId);
         if ("6".equals(creditReportId)) {

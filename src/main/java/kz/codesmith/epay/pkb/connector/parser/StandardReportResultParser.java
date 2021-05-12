@@ -3,16 +3,16 @@ package kz.codesmith.epay.pkb.connector.parser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import kz.codesmith.epay.pkb.connector.model.CigResult;
-import kz.codesmith.epay.pkb.connector.model.Contract;
-import kz.codesmith.epay.pkb.connector.model.Envelope;
-import kz.codesmith.epay.pkb.connector.model.OverduePayment;
+import kz.codesmith.epay.pkb.connector.exception.PkbReportRequestFailed;
+import kz.codesmith.epay.pkb.connector.model.*;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 public class StandardReportResultParser {
     public CigResult parseRoot(String report) throws JsonProcessingException {
         var xmlMapper = new XmlMapper()
@@ -24,8 +24,18 @@ public class StandardReportResultParser {
     public CigResult parse(String reportResult) throws JsonProcessingException {
         var xmlMapper = new XmlMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        var parsedValue = xmlMapper.readValue(reportResult, CigResult.class);
-        return parsedValue;
+        var parsedValue = xmlMapper.readValue(reportResult, Envelope.class);
+
+        var err = parsedValue.getBody().getReportResponse().getReportResult().getCigResultError();
+        if (err != null) {
+            var errCode = err.getErrorMessage().getCode();
+            var errMsg = err.getErrorMessage().getMessage();
+
+            log.warn(errCode + " - " + errMsg);
+            throw new PkbReportRequestFailed(errCode + " - " + errMsg);
+        }
+
+        return parsedValue.getBody().getReportResponse().getReportResult().getCigResult();
     }
 
     public List<OverduePayment> getAllOverduePayments(CigResult data) {
