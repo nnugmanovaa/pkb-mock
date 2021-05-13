@@ -2,7 +2,7 @@ FROM amazoncorretto:11.0.9
 
 WORKDIR /app
 
-COPY build/libs/pkb-connector-0.0.1.jar pkb-connector.jar
+COPY build/libs/pkb-connector-0.0.2.jar pkb-connector.jar
 
 EXPOSE 8080
 
