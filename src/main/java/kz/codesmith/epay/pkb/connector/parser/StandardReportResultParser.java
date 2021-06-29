@@ -1,5 +1,6 @@
 package kz.codesmith.epay.pkb.connector.parser;
 
+import com.ctc.wstx.exc.WstxException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -24,18 +25,22 @@ public class StandardReportResultParser {
     public CigResult parse(String reportResult) throws JsonProcessingException {
         var xmlMapper = new XmlMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        var parsedValue = xmlMapper.readValue(reportResult, Envelope.class);
+        try {
+            var parsedValue = xmlMapper.readValue(reportResult, Envelope.class);
+            var err = parsedValue.getBody().getReportResponse().getReportResult().getCigResultError();
+            if (err != null) {
+                var errCode = err.getErrorMessage().getCode();
+                var errMsg = err.getErrorMessage().getMessage();
 
-        var err = parsedValue.getBody().getReportResponse().getReportResult().getCigResultError();
-        if (err != null) {
-            var errCode = err.getErrorMessage().getCode();
-            var errMsg = err.getErrorMessage().getMessage();
+                log.warn(errCode + " - " + errMsg);
+                throw new PkbReportRequestFailed(errCode + " - " + errMsg);
+            }
 
-            log.warn(errCode + " - " + errMsg);
-            throw new PkbReportRequestFailed(errCode + " - " + errMsg);
+            return parsedValue.getBody().getReportResponse().getReportResult().getCigResult();
+        } catch (Exception e) {
+            log.error("Failed to parse PKB response: " + reportResult);
+            throw new PkbReportRequestFailed("Failed to parse PKB response");
         }
-
-        return parsedValue.getBody().getReportResponse().getReportResult().getCigResult();
     }
 
     public List<OverduePayment> getAllOverduePayments(CigResult data) {
