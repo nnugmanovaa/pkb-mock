@@ -2,13 +2,17 @@ package kz.codesmith.epay.pkb.connector.config;
 
 import kz.codesmith.epay.pkb.connector.parser.StandardReportResultParser;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.apache.http.ssl.SSLContextBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.retry.annotation.EnableRetry;
+
 
 
 @Configuration
@@ -18,6 +22,7 @@ public class AppConfig {
     private final ConnectorProperties props;
 
     @Bean
+    @SneakyThrows
     public CloseableHttpClient getHttpClient() {
         var keepAliveMillis = (int)props.getDefaultKeepAlive().toMillis();
         var poolSize = props.getConnectionPoolSize();
@@ -32,8 +37,14 @@ public class AppConfig {
                 .setConnectionRequestTimeout(timeout)
                 .setSocketTimeout(timeout).build();
 
+        var sslContext = new SSLContextBuilder()
+                .loadTrustMaterial(null, (arg0, arg1) -> true)
+                .build();
+
         return HttpClients.custom()
                 .setConnectionManager(connManager)
+                .setSSLHostnameVerifier(NoopHostnameVerifier.INSTANCE)
+                .setSSLContext(sslContext)
                 .setDefaultRequestConfig(reqConfig)
                 .build();
     }
