@@ -39,7 +39,7 @@ public class CreditReportClient {
             "                    <idNumber>%s</idNumber>\n" +
             "                    <idNumberType>14</idNumberType>\n" +
             "                    <idNumberCode>Entity.Identification.Type.Iin</idNumberCode>\n" +
-            "                    <ConsentConfirmed>1</ConsentConfirmed>>\n" +
+            "                    <ConsentConfirmed>1</ConsentConfirmed>\n" +
             "                </keyValue>\n" +
             "            </ws:doc>\n" +
             "        </ws:GetReport>\n" +
@@ -67,7 +67,7 @@ public class CreditReportClient {
                 throw new PkbReportRequestFailed("Failed with status code " + respStatusCode);
             }
         } catch (IOException e) {
-            log.error("Can't get report due IOException");
+            log.error("Can't get report due IOException\nPOST request body:\n{}", soapRequestBody);
         }
         return report;
     }
