@@ -8,9 +8,11 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.retry.annotation.EnableRetry;
 
 
 @Configuration
+@EnableRetry
 @RequiredArgsConstructor
 public class AppConfig {
     private final ConnectorProperties props;

@@ -9,8 +9,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 
 @Slf4j
@@ -23,6 +26,7 @@ public class CreditReportService {
     private final CreditReportClient reportClient;
     private final StandardReportResultParser standardReportResultParser;
 
+    @Retryable(value = IOException.class, maxAttempts = 2, backoff = @Backoff(delay = 3_000))
     public String getCreditReportRaw(String iin, String creditReportId) {
         return reportClient.getReport(iin, creditReportId);
     }

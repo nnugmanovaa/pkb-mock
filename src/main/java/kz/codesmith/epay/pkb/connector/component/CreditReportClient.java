@@ -9,7 +9,6 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.springframework.stereotype.Component;
 
@@ -38,7 +37,7 @@ public class CreditReportClient {
             "                    <reportImportCode>%s</reportImportCode>\n" +
             "                    <idNumber>%s</idNumber>\n" +
             "                    <idNumberType>14</idNumberType>\n" +
-            "                    <idNumberCode>Entity.Identification.Type.Iin</idNumberCode>\n" +
+            //"                    <idNumberCode>Entity.Identification.Type.Iin</idNumberCode>\n" +
             "                    <ConsentConfirmed>1</ConsentConfirmed>\n" +
             "                </keyValue>\n" +
             "            </ws:doc>\n" +
@@ -68,6 +67,7 @@ public class CreditReportClient {
             }
         } catch (IOException e) {
             log.error("Can't get report due IOException\nPOST request body:\n{}", soapRequestBody);
+            throw e;
         }
         return report;
     }
