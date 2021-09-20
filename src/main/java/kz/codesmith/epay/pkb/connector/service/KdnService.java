@@ -6,6 +6,7 @@ import kz.codesmith.epay.pkb.connector.model.kdn.KdnRequest;
 import kz.codesmith.epay.pkb.connector.parser.KdnParser;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,11 @@ public class KdnService {
     }
 
 
+    @Cacheable(
+            value = CACHE_NAME,
+            key = "{#kdnRequest.iin}",
+            unless = "#result == null"
+    )
     public ApplicationReport getKdn(KdnRequest kdnRequest) {
         var raw = getKdnRaw(kdnRequest);
         return kdnParser.parse(raw);

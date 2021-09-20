@@ -1,6 +1,7 @@
 package kz.codesmith.epay.pkb.connector.config;
 
 import kz.codesmith.epay.pkb.connector.service.CreditReportService;
+import kz.codesmith.epay.pkb.connector.service.KdnService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.cache.RedisCacheManagerBuilderCustomizer;
 import org.springframework.cache.annotation.EnableCaching;
@@ -25,6 +26,11 @@ public class CacheConfig {
                     CreditReportService.CACHE_NAME,
                     RedisCacheConfiguration.defaultCacheConfig().entryTtl(props.getCreditReportCacheTtl())
             );
+            configurationMap.put(
+                    KdnService.CACHE_NAME,
+                    RedisCacheConfiguration.defaultCacheConfig().entryTtl(props.getKdnCacheTtl())
+            );
+
             builder.withInitialCacheConfigurations(configurationMap);
         };
     }
