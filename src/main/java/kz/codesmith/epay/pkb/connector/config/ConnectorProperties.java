@@ -13,6 +13,7 @@ import java.time.Duration;
 @ConfigurationProperties("app.pkb")
 public class ConnectorProperties {
     private String url;
+    private String kdnUrl;
     private String username;
     private String password;
     private Duration connectionTimeout;

@@ -1,5 +1,6 @@
 package kz.codesmith.epay.pkb.connector.config;
 
+import kz.codesmith.epay.pkb.connector.parser.KdnParser;
 import kz.codesmith.epay.pkb.connector.parser.StandardReportResultParser;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -70,5 +71,10 @@ public class AppConfig {
     @Bean
     public StandardReportResultParser standardReportResultParser() {
         return new StandardReportResultParser();
+    }
+
+    @Bean
+    public KdnParser kdnParser() {
+        return new KdnParser();
     }
 }
