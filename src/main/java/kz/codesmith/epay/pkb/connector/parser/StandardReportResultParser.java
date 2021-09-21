@@ -2,6 +2,7 @@ package kz.codesmith.epay.pkb.connector.parser;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import kz.codesmith.epay.pkb.connector.exception.PkbReportRequestFailed;
 import kz.codesmith.epay.pkb.connector.exception.ReportForSubjectNotFound;
@@ -44,7 +45,7 @@ public class StandardReportResultParser {
             }
 
             return parsedValue.getBody().getReportResponse().getReportResult().getCigResult();
-        } catch (Exception e) {
+        } catch (JsonProcessingException e) {
             log.error("Failed to parse PKB response: " + reportResult);
             throw new PkbReportRequestFailed("Failed to parse PKB response");
         }
