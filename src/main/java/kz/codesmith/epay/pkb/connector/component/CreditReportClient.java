@@ -47,7 +47,9 @@ public class CreditReportClient {
 
     @SneakyThrows
     public String getReport(String iin, String reportId) {
-        var post = new HttpPost(props.getUrl());
+        var url = props.getUrl();
+
+        var post = new HttpPost(url);
         var soapRequestBody = String.format(REQUEST_TEMPLATE, props.getPassword(), props.getUsername(), reportId, iin);
         var report = "";
 
@@ -56,6 +58,7 @@ public class CreditReportClient {
         var entity = new StringEntity(soapRequestBody);
         post.setEntity(entity);
 
+        log.info("POST {}\n{}", url, soapRequestBody);
         try (
                 CloseableHttpResponse response = httpClient.execute(post)
         ) {

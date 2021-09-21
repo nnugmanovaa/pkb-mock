@@ -1,10 +1,10 @@
 package kz.codesmith.epay.pkb.connector.parser;
 
-import com.ctc.wstx.exc.WstxException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import kz.codesmith.epay.pkb.connector.exception.PkbReportRequestFailed;
+import kz.codesmith.epay.pkb.connector.exception.ReportForSubjectNotFound;
 import kz.codesmith.epay.pkb.connector.model.*;
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,6 +15,9 @@ import java.util.stream.Collectors;
 
 @Slf4j
 public class StandardReportResultParser {
+
+    public static final String NOT_FOUND_ERR_CODE = "1108";
+
     public CigResult parseRoot(String report) throws JsonProcessingException {
         var xmlMapper = new XmlMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -33,7 +36,11 @@ public class StandardReportResultParser {
                 var errMsg = err.getErrorMessage().getMessage();
 
                 log.warn(errCode + " - " + errMsg);
-                throw new PkbReportRequestFailed(errCode + " - " + errMsg);
+                if(NOT_FOUND_ERR_CODE.equals(errCode)){
+                    throw new ReportForSubjectNotFound(errMsg);
+                } else {
+                    throw new PkbReportRequestFailed(errCode + " - " + errMsg);
+                }
             }
 
             return parsedValue.getBody().getReportResponse().getReportResult().getCigResult();

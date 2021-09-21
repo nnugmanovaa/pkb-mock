@@ -59,7 +59,10 @@ public class KdnClient {
     public String getKdnRaw(KdnRequest request) {
         var formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         var birthday = request.getBirthdate().format(formatter);
-        var post = new HttpPost(props.getKdnUrl());
+
+        var url = props.getKdnUrl();
+        var post = new HttpPost(url);
+
         var soapRequestBody = String.format(
                 REQUEST_TEMPLATE,
                 props.getPassword(),
@@ -79,6 +82,7 @@ public class KdnClient {
 
         var kdnResp = "";
 
+        log.info("POST {}\n{}", url, soapRequestBody);
         try (
                 CloseableHttpResponse response = httpClient.execute(post)
         ) {

@@ -1,6 +1,7 @@
 package kz.codesmith.epay.pkb.connector.controller.error;
 
 import kz.codesmith.epay.pkb.connector.exception.PkbReportRequestFailed;
+import kz.codesmith.epay.pkb.connector.exception.ReportForSubjectNotFound;
 import kz.codesmith.epay.pkb.connector.exception.UnsupportedReportException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,7 +18,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(PkbReportRequestFailed.class)
-    public ResponseEntity<ApiErrorResponse> pkbRequestFailed(PkbReportRequestFailed exc, WebRequest request) throws IOException {
+    public ResponseEntity<ApiErrorResponse> pkbRequestFailed(PkbReportRequestFailed exc, WebRequest request) {
         var errorResponse = ApiErrorResponse.builder()
                 .path(request.getContextPath())
                 .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
@@ -29,7 +30,7 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
     }
 
     @ExceptionHandler(UnsupportedReportException.class)
-    public ResponseEntity<ApiErrorResponse> unsupportedReport(UnsupportedReportException exc, WebRequest request) throws IOException {
+    public ResponseEntity<ApiErrorResponse> unsupportedReport(UnsupportedReportException exc, WebRequest request) {
         var errorResponse = ApiErrorResponse.builder()
                 .path(request.getContextPath())
                 .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
@@ -39,4 +40,17 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
                 .build();
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ExceptionHandler(ReportForSubjectNotFound.class)
+    public ResponseEntity<ApiErrorResponse> reportNotFound(ReportForSubjectNotFound exc, WebRequest request) {
+        var errorResponse = ApiErrorResponse.builder()
+                .path(request.getContextPath())
+                .status(HttpStatus.NOT_FOUND.value())
+                .error("ReportForSubjectNotFound")
+                .timestamp(LocalDateTime.now())
+                .message(exc.getMessage())
+                .build();
+        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+    }
+
 }
