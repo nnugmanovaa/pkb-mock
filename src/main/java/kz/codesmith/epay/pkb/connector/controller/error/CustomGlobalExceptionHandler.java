@@ -17,6 +17,18 @@ import java.time.LocalDateTime;
 @ControllerAdvice
 @RequiredArgsConstructor
 public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler {
+    @ExceptionHandler(ReportForSubjectNotFound.class)
+    public ResponseEntity<ApiErrorResponse> reportNotFound(ReportForSubjectNotFound exc, WebRequest request) {
+        var errorResponse = ApiErrorResponse.builder()
+                .path(request.getContextPath())
+                .status(HttpStatus.NOT_FOUND.value())
+                .error("ReportForSubjectNotFound")
+                .timestamp(LocalDateTime.now())
+                .message(exc.getMessage())
+                .build();
+        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(PkbReportRequestFailed.class)
     public ResponseEntity<ApiErrorResponse> pkbRequestFailed(PkbReportRequestFailed exc, WebRequest request) {
         var errorResponse = ApiErrorResponse.builder()
@@ -40,17 +52,4 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
                 .build();
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
-    @ExceptionHandler(ReportForSubjectNotFound.class)
-    public ResponseEntity<ApiErrorResponse> reportNotFound(ReportForSubjectNotFound exc, WebRequest request) {
-        var errorResponse = ApiErrorResponse.builder()
-                .path(request.getContextPath())
-                .status(HttpStatus.NOT_FOUND.value())
-                .error("ReportForSubjectNotFound")
-                .timestamp(LocalDateTime.now())
-                .message(exc.getMessage())
-                .build();
-        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
-    }
-
 }

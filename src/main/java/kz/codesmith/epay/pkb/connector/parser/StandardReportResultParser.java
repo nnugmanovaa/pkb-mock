@@ -25,7 +25,7 @@ public class StandardReportResultParser {
         return parsedValue.getBody().getReportResponse().getReportResult().getCigResult();
     }
 
-    public CigResult parse(String reportResult) throws JsonProcessingException {
+    public CigResult parse(String reportResult) {
         var xmlMapper = new XmlMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         try {
@@ -35,9 +35,9 @@ public class StandardReportResultParser {
                 var errCode = err.getErrorMessage().getCode();
                 var errMsg = err.getErrorMessage().getMessage();
 
-                log.warn(errCode + " - " + errMsg);
-                if(NOT_FOUND_ERR_CODE.equals(errCode)){
-                    throw new ReportForSubjectNotFound(errMsg);
+                log.warn("[{}] {}", errCode, errMsg);
+                if(NOT_FOUND_ERR_CODE.equals(errCode.trim())){
+                    throw new ReportForSubjectNotFound(errCode + " - " + errMsg);
                 } else {
                     throw new PkbReportRequestFailed(errCode + " - " + errMsg);
                 }
