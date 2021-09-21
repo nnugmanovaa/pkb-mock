@@ -21,7 +21,7 @@ public class KdnController {
 
     private final KdnService kdnService;
 
-    @PutMapping("/")
+    @PutMapping
     public ResponseEntity<?> getKdn(
             @RequestBody KdnRequest kdnRequest
     ) {
