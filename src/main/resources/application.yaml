@@ -18,7 +18,7 @@ logging:
 app:
   pkb:
     url: '${PKB_PROTOCOL:http}://${PKB_HOST:www-test2.1cb.kz}:${PKB_PORT:80}/FCBServices/Service'
-    kdnUrl: '${PKB_PROTOCOL:http}://${PKB_HOST:www-test2.1cb.kz}:${PKB_PORT:80}/kdn/kdnService'
+    kdnUrl: '${PKB_KDN_PROTOCOL:http}://${PKB_KDN_HOST:www-test2.1cb.kz}:${PKB_KDN_PORT:80}/kdn/kdnService'
     username: '${PKB_USERNAME:7018884245}'
     password: '${PKB_PASSWORD:911031300745}'
     connection-timeout: ${PKB_CONNECTION_TIMEOUT:60s}
