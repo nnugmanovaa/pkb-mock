@@ -10,6 +10,11 @@ spring:
 server:
   servlet:
     context-path: "/api"
+
+logging:
+  level:
+    org.apache.http: ${HTTP_LOG:INFO}
+
 app:
   pkb:
     url: '${PKB_PROTOCOL:http}://${PKB_HOST:www-test2.1cb.kz}:${PKB_PORT:80}/FCBServices/Service'

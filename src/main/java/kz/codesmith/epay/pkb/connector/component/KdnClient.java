@@ -71,9 +71,10 @@ public class KdnClient {
                 birthday
         );
 
-        post.addHeader("Content-Type", "text/xml;charset=UTF-8");
+        post.addHeader("Content-Type", "text/xml");
 
         var entity = new StringEntity(soapRequestBody);
+        entity.setContentType("text/xml");
         post.setEntity(entity);
 
         var kdnResp = "";
