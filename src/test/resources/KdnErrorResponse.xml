@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope
+  xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+  <S:Body>
+    <ns2:kdnReqResponse
+      xmlns:ns2="http://kdn2.ws.creditinfo.com/"
+      xmlns:ns3="http://www.w3.org/2000/09/xmldsig#"
+      xmlns:ns4="http://bip.bee.kz/SyncChannel/v10/Types"
+      xmlns:ns5="http://tempuri.org/"
+      xmlns:ns6="http://web.incomes.service.fcb.com/"
+      xmlns:ns7="http://bip.bee.kz/SyncChannel/v10/Interfaces">
+      <ns2:return>
+        <ns2:applicationReport>
+          <ns2:RequestId>5158538</ns2:RequestId>
+          <ns2:dateApplication>2021-11-18T16:28:51.750+06:00</ns2:dateApplication>
+          <ns2:IIN>900401402427</ns2:IIN>
+          <ns2:income>310.50</ns2:income>
+          <ns2:incomesResultCrtrV2>
+            <fcbStatus>OK</fcbStatus>
+            <fcbMessage>Запрос обработан</fcbMessage>
+            <result>
+              <responseInfo>
+                <messageId>8316b0ba-8cd7-4b12-be3b-096dd4a46313</messageId>
+                <correlationId>4d5db557-a82d-4eae-9f77-74d6b4179200</correlationId>
+                <responseDate>2021-11-18T16:28:26.000+06:00</responseDate>
+                <status>
+                  <code>SCSS001</code>
+                  <message>Message has been processed successfully</message>
+                </status>
+                <sessionId>e48c0be0-95cb-4b64-96bc-dcee3721699d</sessionId>
+              </responseInfo>
+              <responseData>
+                <data
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns7:baseResponse">
+                  <responseCode>FOUND</responseCode>
+                  <requestNumber>9ec9ac62cf-KDNV2-5158538</requestNumber>
+                  <requestIin>900401402427</requestIin>
+                  <responseDate>2021-11-18T16:28:26.000+06:00</responseDate>
+                  <responseNumber>668e49e7-4b36-4f86-a996-adc714bf183d</responseNumber>
+                  <deductionsDetailed>
+                    <bin>900401402427</bin>
+                    <date>2021-07-22T00:00:00+06:00</date>
+                    <name>ДЇЙСЕБЕК ЖАДЫРА ДЇЙСЕБЕКЌЫЗЫ</name>
+                    <amount>1863.0</amount>
+                  </deductionsDetailed>
+                  <ns3:Signature>
+                    <ns3:SignedInfo>
+                      <ns3:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                      <ns3:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#gost34310-gost34311"/>
+                      <ns3:Reference URI="">
+                        <ns3:Transforms>
+                          <ns3:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                          <ns3:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+                        </ns3:Transforms>
+                        <ns3:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#gost34311"/>
+                        <ns3:DigestValue>RDZYTXhqV0ZzNDVSY2tZZHl3SzVkY0V5dEt0a0lHdkl6T09CWFgvVlZRcz0=</ns3:DigestValue>
+                      </ns3:Reference>
+                    </ns3:SignedInfo>
+                    <ns3:SignatureValue>CmVlZVRVUWp0clZEeE5DUHl0Z2ZjQnoya3p5TzB5dERBZ3NrU2xBVk1HZDdONERLUmRNMTR5TkNpK0RYSjM1eUUzTnVaV1JPQndqWFcKOXU2T2kwQTRIdz09Cg==</ns3:SignatureValue>
+                    <ns3:KeyInfo>
+                      <ns3:X509Data>
+                        <ns3:X509Certificate>MIIE7jCCBJigAwIBAgIUcwLLKLhqYgvx7ebl27Jq9bc157owDQYJKoMOAwoBAQECBQAwUzELMAkGA1UEBhMCS1oxRDBCBgNVBAMMO9Kw0JvQotCi0KvSmiDQmtCj05jQm9CQ0J3QlNCr0KDQo9Co0Ksg0J7QoNCi0JDQm9Cr0pogKEdPU1QpMB4XDTIxMDcyODEzNDQxNloXDTIyMDcyODEzNDQxNlowggGNMSIwIAYDVQQDDBnQntCh0J/QkNCd0J7QkiDQldCg0JHQntCbMRcwFQYDVQQEDA7QntCh0J/QkNCd0J7QkjEYMBYGA1UEBRMPSUlONzcwMTE2MzAwODgyMQswCQYDVQQGEwJLWjGBxDCBwQYDVQQKDIG50JPQntCh0KPQlNCQ0KDQodCi0JLQldCd0J3QntCVINCj0KfQoNCV0JbQlNCV0J3QmNCVICLQnNCY0J3QmNCh0KLQldCg0KHQotCS0J4g0KLQoNCj0JTQkCDQmCDQodCe0KbQmNCQ0JvQrNCd0J7QmSDQl9CQ0KnQmNCi0Ksg0J3QkNCh0JXQm9CV0J3QmNCvINCg0JXQodCf0KPQkdCb0JjQmtCYINCa0JDQl9CQ0KXQodCi0JDQnSIxGDAWBgNVBAsMD0JJTjE3MDM0MDAwMTMzOTEfMB0GA1UEKgwW0JTQo9CZ0KHQldCR0JDQldCS0JjQpzElMCMGCSqGSIb3DQEJARYWRS5PU1BBTk9WQEVOQkVLLkdPVi5LWjBsMCUGCSqDDgMKAQEBATAYBgoqgw4DCgEBAQEBBgoqgw4DCgEDAQEAA0MABEBNzxx+ffg9U2nCeMbFafG2cSWVoPegYfRJz1ex31PUaE7mYGID59OeONvSlQSjLaElRnoIa6wpxo11egkFupsGo4IB9jCCAfIwDgYDVR0PAQH/BAQDAgbAMDMGA1UdJQQsMCoGCCsGAQUFBwMEBggqgw4DAwQBAgYJKoMOAwMEAQICBgkqgw4DAwQDAgEwDwYDVR0jBAgwBoAEW2pz6TAdBgNVHQ4EFgQU71j/n++vxWmrSS7xygG+aa9gh90wXgYDVR0gBFcwVTBTBgcqgw4DAwIBMEgwIQYIKwYBBQUHAgEWFWh0dHA6Ly9wa2kuZ292Lmt6L2NwczAjBggrBgEFBQcCAjAXDBVodHRwOi8vcGtpLmdvdi5rei9jcHMwWAYDVR0fBFEwTzBNoEugSYYiaHR0cDovL2NybC5wa2kuZ292Lmt6L25jYV9nb3N0LmNybIYjaHR0cDovL2NybDEucGtpLmdvdi5rei9uY2FfZ29zdC5jcmwwXAYDVR0uBFUwUzBRoE+gTYYkaHR0cDovL2NybC5wa2kuZ292Lmt6L25jYV9kX2dvc3QuY3JshiVodHRwOi8vY3JsMS5wa2kuZ292Lmt6L25jYV9kX2dvc3QuY3JsMGMGCCsGAQUFBwEBBFcwVTAvBggrBgEFBQcwAoYjaHR0cDovL3BraS5nb3Yua3ovY2VydC9uY2FfZ29zdC5jZXIwIgYIKwYBBQUHMAGGFmh0dHA6Ly9vY3NwLnBraS5nb3Yua3owDQYJKoMOAwoBAQECBQADQQBf2l4tJHSQdltWa2KOhpPqM/7i4JMJPzXu2pzapuVziOZtffGL2hZGg3fObcb8Ew+3HHqf4eZsw0bstkV0BBfc</ns3:X509Certificate>
+                      </ns3:X509Data>
+                    </ns3:KeyInfo>
+                  </ns3:Signature>
+                </data>
+              </responseData>
+            </result>
+            <resultASP>
+              <PersonLargeFamilyResponse
+                xmlns:ns2="http://web.incomes.service.fcb.com/"
+                xmlns:ns6="http://bip.bee.kz/SyncChannel/v10/Interfaces">
+                <iin>900401402427</iin>
+                <state>NO</state>
+              </PersonLargeFamilyResponse>
+            </resultASP>
+            <resultESP>
+              <singleAggregatePaymentResponse
+                xmlns:ns2="http://web.incomes.service.fcb.com/"
+                xmlns:ns6="http://bip.bee.kz/SyncChannel/v10/Interfaces"
+                xmlns:ns7="http://www.mtszn.kz/services/PersonCotracts/schemas">
+                <isEspPayer
+                  xmlns="http://www.mtszn.kz/services/PersonCotracts/schemas">false
+                </isEspPayer>
+                <requestGUID
+                  xmlns="http://www.mtszn.kz/services/PersonCotracts/schemas">d10e8be3-df27-df25-e053-0d211fac1777
+                </requestGUID>
+                <ds:Signature
+                  xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                  <ds:SignedInfo>
+                    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                    <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#gost34310-gost34311"/>
+                    <ds:Reference URI="">
+                      <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        <ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+                      </ds:Transforms>
+                      <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#gost34311"/>
+                      <ds:DigestValue>HglcRDmQONL4Xw1wE45nrPNabZGJUXi6ZmFUh+YUVEA=</ds:DigestValue>
+                    </ds:Reference>
+                  </ds:SignedInfo>
+                  <ds:SignatureValue>
+                    MnfQ4rLS4aL7Q87q3PVPCIGEhRs10uQl14GIfxLaqkA/WMKBF1jCWrXVl6SqMvkpwuYfuSfG2HS3
+                    1Sd3Ww5mlw==
+                  </ds:SignatureValue>
+                  <ds:KeyInfo>
+                    <ds:X509Data>
+                      <ds:X509Certificate>
+                        MIIE7jCCBJigAwIBAgIUcwLLKLhqYgvx7ebl27Jq9bc157owDQYJKoMOAwoBAQECBQAwUzELMAkG
+                        A1UEBhMCS1oxRDBCBgNVBAMMO9Kw0JvQotCi0KvSmiDQmtCj05jQm9CQ0J3QlNCr0KDQo9Co0Ksg
+                        0J7QoNCi0JDQm9Cr0pogKEdPU1QpMB4XDTIxMDcyODEzNDQxNloXDTIyMDcyODEzNDQxNlowggGN
+                        MSIwIAYDVQQDDBnQntCh0J/QkNCd0J7QkiDQldCg0JHQntCbMRcwFQYDVQQEDA7QntCh0J/QkNCd
+                        0J7QkjEYMBYGA1UEBRMPSUlONzcwMTE2MzAwODgyMQswCQYDVQQGEwJLWjGBxDCBwQYDVQQKDIG5
+                        0JPQntCh0KPQlNCQ0KDQodCi0JLQldCd0J3QntCVINCj0KfQoNCV0JbQlNCV0J3QmNCVICLQnNCY
+                        0J3QmNCh0KLQldCg0KHQotCS0J4g0KLQoNCj0JTQkCDQmCDQodCe0KbQmNCQ0JvQrNCd0J7QmSDQ
+                        l9CQ0KnQmNCi0Ksg0J3QkNCh0JXQm9CV0J3QmNCvINCg0JXQodCf0KPQkdCb0JjQmtCYINCa0JDQ
+                        l9CQ0KXQodCi0JDQnSIxGDAWBgNVBAsMD0JJTjE3MDM0MDAwMTMzOTEfMB0GA1UEKgwW0JTQo9CZ
+                        0KHQldCR0JDQldCS0JjQpzElMCMGCSqGSIb3DQEJARYWRS5PU1BBTk9WQEVOQkVLLkdPVi5LWjBs
+                        MCUGCSqDDgMKAQEBATAYBgoqgw4DCgEBAQEBBgoqgw4DCgEDAQEAA0MABEBNzxx+ffg9U2nCeMbF
+                        afG2cSWVoPegYfRJz1ex31PUaE7mYGID59OeONvSlQSjLaElRnoIa6wpxo11egkFupsGo4IB9jCC
+                        AfIwDgYDVR0PAQH/BAQDAgbAMDMGA1UdJQQsMCoGCCsGAQUFBwMEBggqgw4DAwQBAgYJKoMOAwME
+                        AQICBgkqgw4DAwQDAgEwDwYDVR0jBAgwBoAEW2pz6TAdBgNVHQ4EFgQU71j/n++vxWmrSS7xygG+
+                        aa9gh90wXgYDVR0gBFcwVTBTBgcqgw4DAwIBMEgwIQYIKwYBBQUHAgEWFWh0dHA6Ly9wa2kuZ292
+                        Lmt6L2NwczAjBggrBgEFBQcCAjAXDBVodHRwOi8vcGtpLmdvdi5rei9jcHMwWAYDVR0fBFEwTzBN
+                        oEugSYYiaHR0cDovL2NybC5wa2kuZ292Lmt6L25jYV9nb3N0LmNybIYjaHR0cDovL2NybDEucGtp
+                        Lmdvdi5rei9uY2FfZ29zdC5jcmwwXAYDVR0uBFUwUzBRoE+gTYYkaHR0cDovL2NybC5wa2kuZ292
+                        Lmt6L25jYV9kX2dvc3QuY3JshiVodHRwOi8vY3JsMS5wa2kuZ292Lmt6L25jYV9kX2dvc3QuY3Js
+                        MGMGCCsGAQUFBwEBBFcwVTAvBggrBgEFBQcwAoYjaHR0cDovL3BraS5nb3Yua3ovY2VydC9uY2Ff
+                        Z29zdC5jZXIwIgYIKwYBBQUHMAGGFmh0dHA6Ly9vY3NwLnBraS5nb3Yua3owDQYJKoMOAwoBAQEC
+                        BQADQQBf2l4tJHSQdltWa2KOhpPqM/7i4JMJPzXu2pzapuVziOZtffGL2hZGg3fObcb8Ew+3HHqf
+                        4eZsw0bstkV0BBfc
+                      </ds:X509Certificate>
+                    </ds:X509Data>
+                  </ds:KeyInfo>
+                </ds:Signature>
+              </singleAggregatePaymentResponse>
+            </resultESP>
+          </ns2:incomesResultCrtrV2>
+        </ns2:applicationReport>
+        <ns2:ReportDate>18.11.2021</ns2:ReportDate>
+        <ns2:Id>4909984</ns2:Id>
+        <ns2:errorCode>4</ns2:errorCode>
+        <ns2:errorMessage>Недостаточно данных по доходам субъекта</ns2:errorMessage>
+      </ns2:return>
+    </ns2:kdnReqResponse>
+  </S:Body>
+</S:Envelope>

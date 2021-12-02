@@ -29,4 +29,17 @@ class KdnParserTest {
         assertNotEquals(0, respData.getDeductionsDetailed().size());
         assertEquals(6, respData.getDeductionsDetailed().size());
     }
+
+    @Test
+    void parseErrorResponse() throws IOException {
+        Path filePath = Paths.get("src","test","resources", "KdnErrorResponse.xml");
+        var content = Files.readString(filePath);
+
+        var parser = new KdnParser();
+        var applicationReport = parser.parse(content);
+        assertNotNull(applicationReport);
+        assertEquals("4", applicationReport.getErrorCode());
+        assertEquals("Недостаточно данных по доходам субъекта",
+            applicationReport.getErrorMessage());
+    }
 }
