@@ -28,4 +28,9 @@ public class ApplicationReport implements Serializable {
     @JacksonXmlProperty(namespace = "ns2", localName = "incomesResultCrtrV2")
     private IncomesResultCrtrV2 incomesResultCrtrV2;
 
+    @JacksonXmlProperty(namespace = "errorCode", localName = "errorCode")
+    private String errorCode;
+
+    @JacksonXmlProperty(namespace = "errorMessage", localName = "errorMessage")
+    private String errorMessage;
 }

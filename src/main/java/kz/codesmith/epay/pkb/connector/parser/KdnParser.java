@@ -19,12 +19,24 @@ public class KdnParser {
         try {
             var parsedValue = xmlMapper.readValue(kdnRawResp, Envelope.class);
             var retrn = parsedValue.getBody().getKdnReqResponse().getAReturn();
-            if (Objects.nonNull(retrn.getErrorCode()) && !"0".equals(retrn.getErrorCode())) {
-                var errCode = retrn.getErrorCode();
-                var errMsg = retrn.getErrorMessage();
+            if (Objects.nonNull(retrn.getErrorCode())) {
+                if ("4".equals(retrn.getErrorCode())) {
+                  ApplicationReport applicationReport = parsedValue
+                      .getBody()
+                      .getKdnReqResponse()
+                      .getAReturn()
+                      .getApplicationReport();
 
-                log.warn(errCode + " - " + errMsg);
-                throw new KdnRequestFailed(errCode + " - " + errMsg);
+                  applicationReport.setErrorCode(retrn.getErrorCode());
+                  applicationReport.setErrorMessage(retrn.getErrorMessage());
+                  return applicationReport;
+                } else if (!"0".equals(retrn.getErrorCode())) {
+                    var errCode = retrn.getErrorCode();
+                    var errMsg = retrn.getErrorMessage();
+
+                    log.warn(errCode + " - " + errMsg);
+                    throw new KdnRequestFailed(errCode + " - " + errMsg);
+                }
             }
 
             return parsedValue.getBody().getKdnReqResponse().getAReturn().getApplicationReport();
