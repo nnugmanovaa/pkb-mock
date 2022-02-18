@@ -2,6 +2,7 @@ package kz.codesmith.epay.pkb.connector.controller;
 
 import kz.codesmith.epay.pkb.connector.model.kdn.KdnRequest;
 import kz.codesmith.epay.pkb.connector.service.KdnService;
+import kz.codesmith.epay.pkb.connector.service.ReportClientService;
 import kz.codesmith.logger.Logged;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,12 +20,21 @@ public class KdnController {
     public static final String PATH = "/kdn";
 
     private final KdnService kdnService;
+    private final ReportClientService reportService;
 
     @PutMapping
     public ResponseEntity<?> getKdn(
             @RequestBody KdnRequest kdnRequest
     ) {
-        var resp = kdnService.getKdn(kdnRequest);
-        return ResponseEntity.ok(resp);
+        log.info("GET KDN parsed info, for {}", kdnRequest.getIin());
+        return ResponseEntity.ok(kdnService.getKdn(kdnRequest));
+    }
+
+    @PutMapping("/raw")
+    public ResponseEntity<String> getKdnRaw(
+        @RequestBody KdnRequest kdnRequest
+    ) {
+        log.info("GET KDN raw info, for {}", kdnRequest.getIin());
+        return ResponseEntity.ok(reportService.getKdnRaw(kdnRequest));
     }
 }

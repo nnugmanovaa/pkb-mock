@@ -72,6 +72,7 @@ public class CreditReportClient {
             log.error("Can't get report due IOException\nPOST request body:\n{}", soapRequestBody);
             throw e;
         }
+        log.info("PKB report {} , called from PKB for {}", reportId, iin);
         return report;
     }
 }

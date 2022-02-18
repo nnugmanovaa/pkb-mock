@@ -97,6 +97,7 @@ public class KdnClient {
             log.error("Can't get KDN due IOException\nPOST request body:\n{}", soapRequestBody);
             throw e;
         }
+        log.info("KDN report called from PKB for {}", request.getIin());
         return kdnResp;
     }
 }
