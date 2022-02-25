@@ -2,6 +2,9 @@ package kz.codesmith.epay.pkb.connector.controller;
 
 import kz.codesmith.epay.pkb.connector.model.CigResult;
 import kz.codesmith.epay.pkb.connector.model.OverduePayment;
+import kz.codesmith.epay.pkb.connector.model.PkbReportsDto;
+import kz.codesmith.epay.pkb.connector.model.PkbReportsRequest;
+import kz.codesmith.epay.pkb.connector.model.kdn.KdnRequest;
 import kz.codesmith.epay.pkb.connector.service.CreditReportService;
 import kz.codesmith.epay.pkb.connector.service.ReportClientService;
 import kz.codesmith.logger.Logged;
@@ -56,5 +59,17 @@ public class CreditReportController {
         var report = reportService.getOverduePayments(iin, reportId, period, amount);
         log.info("OverduePayments report response for {}: {}", iin, report);
         return ResponseEntity.ok(report);
+    }
+
+    @PostMapping("/all")
+    public ResponseEntity<PkbReportsDto> getPkbReports(@RequestBody PkbReportsRequest request) {
+        PkbReportsDto reportsDto = new PkbReportsDto();
+        reportsDto.setFullReport(reportClientService
+            .getCreditReportRaw(request.getIin(), "6"));
+        reportsDto.setStandardReport(reportClientService
+            .getCreditReportRaw(request.getIin(), "4"));
+        reportsDto.setIncomeReport(reportClientService
+            .getKdnRaw(request.getKdnRequest()));
+        return ResponseEntity.ok(reportsDto);
     }
 }
