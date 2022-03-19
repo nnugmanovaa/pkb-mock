@@ -1,0 +1,1029 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header>
+    <CigWsHeader xmlns="" xmlns:ns3="http://ws.creditinfo.com/">
+      <ns3:Culture>ru-RU</ns3:Culture>
+      <ns3:Password>***</ns3:Password>
+      <ns3:UserId>4368</ns3:UserId>
+      <ns3:UserName>7018884245</ns3:UserName>
+    </CigWsHeader>
+  </SOAP-ENV:Header>
+  <S:Body>
+    <GetReportResponse xmlns="http://ws.creditinfo.com/">
+      <GetReportResult>
+        <CigResult xmlns="" xmlns:ns2="http://ws.creditinfo.com/" Version="4.0">
+          <DateTime>18.03.2022 22:47:24</DateTime>
+          <ReferenceId>10</ReferenceId>
+          <ServiceName>Front Office WS</ServiceName>
+          <ResultCulture>ru-RU</ResultCulture>
+          <ResultCode>10</ResultCode>
+          <ResultDescription/>
+          <UsageIdentity/>
+          <Result>
+            <Root>
+              <Title intitle="СУБЪЕКТ КРЕДИТНОГО ОТЧЕТА" name="tblTitle" title="Республика Казахстан. ТОО «Первое кредитное бюро»"/>
+              <Header EntityType="Individual" ReportCode="Report.ReportName.Advanced" intitle="СУБЪЕКТ КРЕДИТНОГО ОТЧЕТА" name="tblHeader" stitle="Данные о субъекте кредитной истории" subject="Физическое лицо" title="Кредитный отчет - расширенный">
+                <FIUniqueNumberID id="" title="Уникальный номер финансового учреждения" value=""/>
+                <RegistrationID stitle="ID субъекта" title="Регистрационный ИД" value="3179540"/>
+                <RNN id="1" title="РНН" value="390910271988"/>
+                <SIC id="3" title="СИК" value="M3DZ61JAJ08X000J"/>
+                <IIN id="14" title="ИИН" value="820527350815"/>
+                <DateOfBirth title="Дата рождения" value="27.05.1982"/>
+                <Gender title="Пол" value="Мужской"/>
+                <Surname title="Фамилия в настоящее время" value="БЕГАЙДАРОВ"/>
+                <Name stitle="ФИО" title="Имя" value="САЛАВАТ"/>
+                <FathersName title="Отчество" value="ДИЛМАГОМБЕТОВИЧ"/>
+                <BirthName title="Фамилия по рождению" value="-"/>
+                <CityOfBirth title="Место рождения  (город)" value=""/>
+                <Education id="1" title="Образование" value="Среднее"/>
+                <MatrialStatus id="2" title="Семейное положение" value="Женат/замужем"/>
+                <RegionOfBirth title="Место рождения ( область, район)" value=""/>
+                <CountryOfBirth title="Страна рождения (код страны)" value=""/>
+              </Header>
+              <SubjectDetails name="SubjectDetails" stitle="Дополнительная информация" title="СУБЪЕКТ, СЕМЬЯ И ЗАНЯТОСТЬ  ">
+                <NumberOfDependents title="Кол-во иждивенцев до 18 лет" value="2"/>
+                <NumberOfChildern stitle="старше 18 лет"/>
+                <NumberOfDependents stitle2="Количество иждивенцев" stitle3="Возраст иждивенцев"/>
+                <NumberOfChildern title="Кол-во иждивенцев старше 18 лет" value="0"/>
+                <NumberOfDependents stitle="до 18 лет"/>
+                <StreetAddress title="Улица" value="Казахстан,  110000000,  Атбасарский район,  УЛИЦА Достык,  2,  Да"/>
+                <Street title="Улица" value="Казахстан,  110000000,  Атбасарский район,  УЛИЦА Достык,  2,  Да"/>
+                <City title="Город" value="Акмолинская область"/>
+                <ZipCode title="Почтовый индекс" value=""/>
+                <Region title="Область, район" value="Акмолинская область"/>
+                <Country title="Cтрана" value="Казахстан"/>
+                <Number title="Номер дома" value=""/>
+                <CellularPhone title="Номер сотового телефона" value=" +77057418842"/>
+                <HomePhone title="Домашний телефон" value=" дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                <OfficePhone title="Рабочий телефон" value=" +77164392121"/>
+                <Fax title="Номер факса" value=""/>
+                <Email title="E-Mail" value=""/>
+                <EmployeesSalary title="Зарплата (нетто)" value="100 000 - 150 000 тенге в месяц"/>
+              </SubjectDetails>
+              <SubjectsAddress stitle="Адреса" stitle2="Контакты" title="">
+                <Address title="Текущие" type="Current">
+                  <AddressType title="Тип адреса"/>
+                  <Street title="Улица" value="КАЗАХСТАН,  АКМОЛИНСКАЯ ОБЛАСТЬ,  АТБАСАРСКИЙ РАЙОН,  С.СОЧИНСК"/>
+                  <Number stitle="№ дома/квартиры" title="Номер дома" value=""/>
+                  <ZipCode title="Почтовый индекс" value=""/>
+                  <City title="Город" value="г.Кокшетау"/>
+                  <Country title="Cтрана" value="Казахстан"/>
+                  <Region stitle="Населенный пункт" title="Область, район" value="Акмолинская область"/>
+                  <HomePhone title="Домашний телефон" value="дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                  <OfficePhone title="Рабочий телефон" value="+77164392121"/>
+                  <Fax title="Номер факса" value=""/>
+                  <CellularPhone title="Номер сотового телефона" value="+77057418842"/>
+                  <EmailAddress title="E-Mail" value=""/>
+                  <WebPageAddress title="Сайт" value=""/>
+                  <AddressInserted title="Дата" value="03.10.2018"/>
+                  <PostBox title="Почтовый ящик" value=""/>
+                  <AdditionalInfo title="Дополнительная информация" value=""/>
+                </Address>
+                <Address title="Текущие" type="Current">
+                  <AddressType title="Тип адреса" value="Постоянное место жительства"/>
+                  <Street title="Улица" value="АТБАСАРФРУНЗЕ,  61,  кв."/>
+                  <Number stitle="№ дома/квартиры" title="Номер дома" value=""/>
+                  <ZipCode title="Почтовый индекс" value=""/>
+                  <City title="Город" value=""/>
+                  <Country title="Cтрана" value=""/>
+                  <Region stitle="Населенный пункт" title="Область, район" value=""/>
+                  <HomePhone title="Домашний телефон" value="дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                  <OfficePhone title="Рабочий телефон" value="+77164392121"/>
+                  <Fax title="Номер факса" value=""/>
+                  <CellularPhone title="Номер сотового телефона" value="+77057418842"/>
+                  <EmailAddress title="E-Mail" value=""/>
+                  <WebPageAddress title="Сайт" value=""/>
+                  <AddressInserted title="Дата" value="06.06.2007"/>
+                  <PostBox title="Почтовый ящик" value=""/>
+                  <AdditionalInfo title="Дополнительная информация" value=""/>
+                </Address>
+                <Address title="Текущие" type="Current">
+                  <AddressType title="Тип адреса" value="Постоянное место жительства"/>
+                  <Street title="Улица" value="КАЗАХСТАН,  АКМОЛИНСКАЯ ОБЛАСТЬ,  АТБАСАРСКИЙ РАЙОН,  С.СОЧИНС"/>
+                  <Number stitle="№ дома/квартиры" title="Номер дома" value=""/>
+                  <ZipCode title="Почтовый индекс" value=""/>
+                  <City title="Город" value="г.Кокшетау"/>
+                  <Country title="Cтрана" value="Казахстан"/>
+                  <Region stitle="Населенный пункт" title="Область, район" value="Акмолинская область"/>
+                  <HomePhone title="Домашний телефон" value="дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                  <OfficePhone title="Рабочий телефон" value="+77164392121"/>
+                  <Fax title="Номер факса" value=""/>
+                  <CellularPhone title="Номер сотового телефона" value="+77057418842"/>
+                  <EmailAddress title="E-Mail" value=""/>
+                  <WebPageAddress title="Сайт" value=""/>
+                  <AddressInserted title="Дата" value="10.01.2014"/>
+                  <PostBox title="Почтовый ящик" value=""/>
+                  <AdditionalInfo title="Дополнительная информация" value=""/>
+                </Address>
+                <Address title="Текущие" type="Current">
+                  <AddressType title="Тип адреса" value="Постоянное место жительства"/>
+                  <Street title="Улица" value="Казахстан,  110000000,  Атбасарский район,  УЛИЦА Достык,  2,  Да"/>
+                  <Number stitle="№ дома/квартиры" title="Номер дома" value=""/>
+                  <ZipCode title="Почтовый индекс" value=""/>
+                  <City title="Город" value="Акмолинская область"/>
+                  <Country title="Cтрана" value="Казахстан"/>
+                  <Region stitle="Населенный пункт" title="Область, район" value="Акмолинская область"/>
+                  <HomePhone title="Домашний телефон" value="дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                  <OfficePhone title="Рабочий телефон" value="+77164392121"/>
+                  <Fax title="Номер факса" value=""/>
+                  <CellularPhone title="Номер сотового телефона" value="+77057418842"/>
+                  <EmailAddress title="E-Mail" value=""/>
+                  <WebPageAddress title="Сайт" value=""/>
+                  <AddressInserted title="Дата" value="10.03.2022"/>
+                  <PostBox title="Почтовый ящик" value=""/>
+                  <AdditionalInfo title="Дополнительная информация" value=""/>
+                </Address>
+                <Address title="Текущие" type="Current">
+                  <AddressType title="Тип адреса"/>
+                  <Street title="Улица" value="Казахстан,  110000000,  Атбасарский район,  УЛИЦА Достык,  2,  Да"/>
+                  <Number stitle="№ дома/квартиры" title="Номер дома" value=""/>
+                  <ZipCode title="Почтовый индекс" value=""/>
+                  <City title="Город" value="Акмолинская область"/>
+                  <Country title="Cтрана" value="Казахстан"/>
+                  <Region stitle="Населенный пункт" title="Область, район" value="Акмолинская область"/>
+                  <HomePhone title="Домашний телефон" value="дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                  <OfficePhone title="Рабочий телефон" value="+77164392121"/>
+                  <Fax title="Номер факса" value=""/>
+                  <CellularPhone title="Номер сотового телефона" value="+77057418842"/>
+                  <EmailAddress title="E-Mail" value=""/>
+                  <WebPageAddress title="Сайт" value=""/>
+                  <AddressInserted title="Дата" value="10.03.2022"/>
+                  <PostBox title="Почтовый ящик" value=""/>
+                  <AdditionalInfo title="Дополнительная информация" value=""/>
+                </Address>
+                <Address title="Текущие" type="Current">
+                  <AddressType title="Тип адреса"/>
+                  <Street title="Улица" value="АТБАСАРФРУНЗЕ,  61,  кв."/>
+                  <Number stitle="№ дома/квартиры" title="Номер дома" value=""/>
+                  <ZipCode title="Почтовый индекс" value=""/>
+                  <City title="Город" value=""/>
+                  <Country title="Cтрана" value=""/>
+                  <Region stitle="Населенный пункт" title="Область, район" value=""/>
+                  <HomePhone title="Домашний телефон" value="дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                  <OfficePhone title="Рабочий телефон" value="+77164392121"/>
+                  <Fax title="Номер факса" value=""/>
+                  <CellularPhone title="Номер сотового телефона" value="+77057418842"/>
+                  <EmailAddress title="E-Mail" value=""/>
+                  <WebPageAddress title="Сайт" value=""/>
+                  <AddressInserted title="Дата" value="12.03.2015"/>
+                  <PostBox title="Почтовый ящик" value=""/>
+                  <AdditionalInfo title="Дополнительная информация" value=""/>
+                </Address>
+                <Address title="Текущие" type="Current">
+                  <AddressType title="Тип адреса" value="Постоянное место жительства"/>
+                  <Street title="Улица" value="ул.Достык ,  д.2"/>
+                  <Number stitle="№ дома/квартиры" title="Номер дома" value=""/>
+                  <ZipCode title="Почтовый индекс" value=""/>
+                  <City title="Город" value="Акмолинская область"/>
+                  <Country title="Cтрана" value="Казахстан"/>
+                  <Region stitle="Населенный пункт" title="Область, район" value="Акмолинская область"/>
+                  <HomePhone title="Домашний телефон" value="дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                  <OfficePhone title="Рабочий телефон" value="+77164392121"/>
+                  <Fax title="Номер факса" value=""/>
+                  <CellularPhone title="Номер сотового телефона" value="+77057418842"/>
+                  <EmailAddress title="E-Mail" value=""/>
+                  <WebPageAddress title="Сайт" value=""/>
+                  <AddressInserted title="Дата" value="23.03.2020"/>
+                  <PostBox title="Почтовый ящик" value=""/>
+                  <AdditionalInfo title="Дополнительная информация" value=""/>
+                </Address>
+                <Address title="Текущие" type="Current">
+                  <AddressType title="Тип адреса"/>
+                  <Street title="Улица" value="ул.Достык ,  д.2"/>
+                  <Number stitle="№ дома/квартиры" title="Номер дома" value=""/>
+                  <ZipCode title="Почтовый индекс" value=""/>
+                  <City title="Город" value="Акмолинская область"/>
+                  <Country title="Cтрана" value="Казахстан"/>
+                  <Region stitle="Населенный пункт" title="Область, район" value="Акмолинская область"/>
+                  <HomePhone title="Домашний телефон" value="дом.: , моб.: , раб.: 83164327350, конт.:"/>
+                  <OfficePhone title="Рабочий телефон" value="+77164392121"/>
+                  <Fax title="Номер факса" value=""/>
+                  <CellularPhone title="Номер сотового телефона" value="+77057418842"/>
+                  <EmailAddress title="E-Mail" value=""/>
+                  <WebPageAddress title="Сайт" value=""/>
+                  <AddressInserted title="Дата" value="23.03.2020"/>
+                  <PostBox title="Почтовый ящик" value=""/>
+                  <AdditionalInfo title="Дополнительная информация" value=""/>
+                </Address>
+              </SubjectsAddress>
+              <IdentificationDocuments stitle="Документы" title="ДОКУМЕНТЫ УДОСТОВЕРЯЮЩИЕ ЛИЧНОСТЬ – НАСТОЯЩАЯ И ИСТОРИЧЕСКАЯ ИНФОРМАЦИЯ">
+                <Document rank="Первичная оценка" stitle="Текущие" type="Current">
+                  <Name id="1" title="Вид документа" value="РНН"/>
+                  <DateOfRegistration title="Дата записи в систему" value="01.01.1900"/>
+                  <DateOfIssuance title="Дата выдачи" value="01.01.1900"/>
+                  <DateOfExpiration title="Срок действия" value="01.01.2098"/>
+                  <Number title="Номер" value="390910271988"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="06.06.2007"/>
+                </Document>
+                <Document rank="Первичная оценка" stitle="Текущие" type="Current">
+                  <Name id="14" title="Вид документа" value="Индивидуальный идентификационный номер (ИИН)"/>
+                  <DateOfRegistration title="Дата записи в систему" value="18.12.2012"/>
+                  <DateOfIssuance title="Дата выдачи" value="10.07.2007"/>
+                  <DateOfExpiration title="Срок действия" value="01.01.2098"/>
+                  <Number title="Номер" value="820527350815"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="18.12.2012"/>
+                </Document>
+                <Document rank="Вторичная оценка" stitle="Текущие" type="Current">
+                  <Name id="7" title="Вид документа" value="Удостоверение личности"/>
+                  <DateOfRegistration title="Дата записи в систему" value="11.10.1999"/>
+                  <DateOfIssuance title="Дата выдачи" value="-"/>
+                  <DateOfExpiration title="Срок действия" value="-"/>
+                  <Number title="Номер" value="0099337827"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="05.09.2007"/>
+                </Document>
+                <Document rank="Вторичная оценка" stitle="Текущие" type="Current">
+                  <Name id="3" title="Вид документа" value="СИК"/>
+                  <DateOfRegistration title="Дата записи в систему" value="01.01.1900"/>
+                  <DateOfIssuance title="Дата выдачи" value="01.01.1900"/>
+                  <DateOfExpiration title="Срок действия" value="01.01.2098"/>
+                  <Number title="Номер" value="M3DZ61JAJ08X000J"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="06.06.2007"/>
+                </Document>
+                <Document rank="Вторичная оценка" stitle="Текущие" type="Current">
+                  <Name id="7" title="Вид документа" value="Удостоверение личности"/>
+                  <DateOfRegistration title="Дата записи в систему" value="11.10.1999"/>
+                  <DateOfIssuance title="Дата выдачи" value="11.10.1999"/>
+                  <DateOfExpiration title="Срок действия" value="01.01.2098"/>
+                  <Number title="Номер" value="009937827"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="06.06.2007"/>
+                </Document>
+                <Document rank="Вторичная оценка" stitle="Текущие" type="Current">
+                  <Name id="7" title="Вид документа" value="Удостоверение личности"/>
+                  <DateOfRegistration title="Дата записи в систему" value="01.01.1900"/>
+                  <DateOfIssuance title="Дата выдачи" value="10.07.2007"/>
+                  <DateOfExpiration title="Срок действия" value="26.05.2027"/>
+                  <Number title="Номер" value="019355896"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="18.06.2009"/>
+                </Document>
+                <Document rank="Первичная оценка" stitle="Исторические" type="Historical">
+                  <Name id="7" title="Вид документа" value="Удостоверение личности"/>
+                  <DateOfRegistration title="Дата записи в систему" value="10.07.2007"/>
+                  <DateOfIssuance title="Дата выдачи" value="10.07.2007"/>
+                  <DateOfExpiration title="Срок действия" value="26.05.2027"/>
+                  <Number title="Номер" value="820527350815"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="23.03.2020"/>
+                </Document>
+                <Document rank="Первичная оценка" stitle="Исторические" type="Historical">
+                  <Name id="" title="Вид документа" value=""/>
+                  <DateOfRegistration title="Дата записи в систему" value="01.01.1900"/>
+                  <DateOfIssuance title="Дата выдачи" value="-"/>
+                  <DateOfExpiration title="Срок действия" value="-"/>
+                  <Number title="Номер" value="820527350815"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="23.12.2011"/>
+                </Document>
+                <Document rank="Вторичная оценка" stitle="Исторические" type="Historical">
+                  <Name id="7" title="Вид документа" value="Удостоверение личности"/>
+                  <DateOfRegistration title="Дата записи в систему" value="11.10.1999"/>
+                  <DateOfIssuance title="Дата выдачи" value="-"/>
+                  <DateOfExpiration title="Срок действия" value="-"/>
+                  <Number title="Номер" value=" 0099337827"/>
+                  <IssuanceLocation title="Кем выдан" value=""/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="24.02.2008"/>
+                </Document>
+              </IdentificationDocuments>
+              <ClassificationOfBorrower name="ClassificationOfBorrower" title="СОЦИАЛЬНО-ЭКОНОМИЧЕСКИЙ СТАТУС">
+                <BorrowerClassification id="1" title="Классификация субъекта" value="Физическое лицо"/>
+                <Patent title="Номер патента" value=""/>
+                <Resident id="1" title="Резидент/Нерезидент" value="Резидент"/>
+                <SubjectsPosition title="Род занятий" value=""/>
+                <Citizenship id="110" title="Гражданство" value="Казахстан"/>
+                <SubjectsEmployment title="Характер занятости клиента" value=""/>
+                <ForeignersCitizenship title="Гражданство иностранца" value=""/>
+                <EconomicActivityGroup title="Отрасль" value="Прочее"/>
+              </ClassificationOfBorrower>
+              <NegativeData name="NegativeData" title="СТАТУС СУБЪЕКТА">
+                <NegativeStatus title="Действующие договора" type="current" typeTitle="Текущие">
+                  <NegativeStatusOfClient>
+                    <NegativeStatusOfClient title="Статус субъекта" value=""/>
+                    <RegistrationDate title="Последняя дата записи в систему" value="10.03.2022"/>
+                  </NegativeStatusOfClient>
+                  <NegativeStatusOfContract>
+                    <NegativeStatusOfContract id="1" title="Статус договора" value="Стандартные кредиты"/>
+                    <RegistrationDate title="Последняя дата записи в систему" value="10.03.2022"/>
+                    <SubjectRole title="Роль субъекта" value="Заёмщик"/>
+                    <SubjectRoleEn value="Borrower"/>
+                  </NegativeStatusOfContract>
+                </NegativeStatus>
+                <NegativeStatus title="Завершенные договора" type="historical" typeTitle="Исторический">
+                  <NegativeStatusOfContract>
+                    <NegativeStatusOfContract id="2" title="Статус договора" value="Уступка/переуступка права требования по кредиту другому лицу"/>
+                    <RegistrationDate title="Последняя дата записи в систему" value="30.03.2015"/>
+                    <SubjectRole title="Роль субъекта" value="Заёмщик"/>
+                    <SubjectRoleEn value="Borrower"/>
+                  </NegativeStatusOfContract>
+                  <NegativeStatusOfContract>
+                    <NegativeStatusOfContract id="8" title="Статус договора" value="Субстандартные и сомнительные кредиты"/>
+                    <RegistrationDate title="Последняя дата записи в систему" value="06.06.2007"/>
+                    <SubjectRole title="Роль субъекта" value="Заёмщик"/>
+                    <SubjectRoleEn value="Borrower"/>
+                  </NegativeStatusOfContract>
+                  <NegativeStatusOfContract>
+                    <NegativeStatusOfContract id="10" title="Статус договора" value="Статус договора не является негативным"/>
+                    <RegistrationDate title="Последняя дата записи в систему" value="05.09.2007"/>
+                    <SubjectRole title="Роль субъекта" value="Заёмщик"/>
+                    <SubjectRoleEn value="Borrower"/>
+                  </NegativeStatusOfContract>
+                  <NegativeStatusOfContract>
+                    <NegativeStatusOfContract id="1" title="Статус договора" value="Стандартные кредиты"/>
+                    <RegistrationDate title="Последняя дата записи в систему" value="12.12.2018"/>
+                    <SubjectRole title="Роль субъекта" value="Заёмщик"/>
+                    <SubjectRoleEn value="Borrower"/>
+                  </NegativeStatusOfContract>
+                  <NegativeStatusOfContract>
+                    <NegativeStatusOfContract id="1" title="Статус договора" value="Стандартные кредиты"/>
+                    <RegistrationDate title="Последняя дата записи в систему" value="09.06.2020"/>
+                    <SubjectRole title="Роль субъекта" value="Заёмщик"/>
+                    <SubjectRoleEn value="Borrower"/>
+                  </NegativeStatusOfContract>
+                  <NegativeStatusOfContract>
+                    <NegativeStatusOfContract id="1" title="Статус договора" value="Стандартные кредиты"/>
+                    <RegistrationDate title="Последняя дата записи в систему" value="22.02.2021"/>
+                    <SubjectRole title="Роль субъекта" value="Заёмщик"/>
+                    <SubjectRoleEn value="Borrower"/>
+                  </NegativeStatusOfContract>
+                </NegativeStatus>
+                <NegativeStatus title="Отозванные договора" type="withdrawn" typeTitle="Текущие"/>
+              </NegativeData>
+              <SummaryInformation title="ОБЩАЯ ИНФОРМАЦИЯ - ДОГОВОРА">
+                <ExistingContracts title="Действующие договора">
+                  <SubjectRole title="Заёмщик" type="Borrower">
+                    <NumberOfContracts title="Количество" value="1 (KZT)"/>
+                    <NumberOfCreditLines title="Количество кредитных линии" value="0"/>
+                    <TotalOutstandingDebt title="Общая непогашенная сумма" value="50 242,00 KZT"/>
+                    <TotalDebtOverdue title="Общая сумма просроченных взносов" value="0"/>
+                    <TotalFine title="Сумма пеней" value="0"/>
+                    <TotalPenalty title="Сумма штрафов" value="0"/>
+                    <ContractStatuses>
+                      <ContractStatus count="1" value="Стандартные кредиты"/>
+                    </ContractStatuses>
+                  </SubjectRole>
+                </ExistingContracts>
+                <TerminatedContracts title="Завершенные договора">
+                  <SubjectRole title="Заёмщик" type="Borrower">
+                    <NumberOfContracts title="Количество" value="3 (KZT)"/>
+                    <NumberOfCreditLines title="Количество кредитных линии" value="0"/>
+                    <TotalOutstandingDebt title="Общая непогашенная сумма" value="0"/>
+                    <TotalDebtOverdue title="Общая сумма просроченных взносов" value="0"/>
+                    <TotalFine title="Сумма пеней" value="0"/>
+                    <TotalPenalty title="Сумма штрафов" value="0"/>
+                    <ContractStatuses>
+                      <ContractStatus count="3" value="Стандартные кредиты"/>
+                    </ContractStatuses>
+                    <RehabilitationStatus count="1" value="Реабилитирован"/>
+                  </SubjectRole>
+                </TerminatedContracts>
+                <TerminatedContractsDateLimit title="Завершенные более 5 лет назад">
+                  <SubjectRole title="Заёмщик" type="Borrower">
+                    <NumberOfContracts title="Количество" value="3 (KZT)"/>
+                    <NumberOfCreditLines title="Количество кредитных линии" value="0"/>
+                    <TotalOutstandingDebt title="Общая непогашенная сумма" value="0"/>
+                    <TotalDebtOverdue title="Общая сумма просроченных взносов" value="0"/>
+                    <TotalFine title="Сумма пеней" value="0"/>
+                    <TotalPenalty title="Сумма штрафов" value="0"/>
+                    <ContractStatuses>
+                      <ContractStatus count="1" value="Статус договора не является негативным"/>
+                      <ContractStatus count="1" value="Субстандартные и сомнительные кредиты"/>
+                      <ContractStatus count="1" value="Уступка/переуступка права требования по кредиту другому лицу"/>
+                    </ContractStatuses>
+                  </SubjectRole>
+                </TerminatedContractsDateLimit>
+                <WithdrawnApplications title="Отозванные договора"/>
+                <NumberOfApplications title="КОЛИЧЕСТВО ОТКАЗАННЫХ/ОТОЗВАННЫХ ЗАЯВЛЕНИЙ"/>
+                <NumberOfInquiries title="Количество запросов (12м)" value="10">
+                  <FirstQuarter title="1- ый квартал" value="4"/>
+                  <SecondQuarter title="2- ой квартал" value="1"/>
+                  <ThirdQuarter title="3- ий квартал" value="2"/>
+                  <FourthQuarter title="4- ой квартал" value="3"/>
+                </NumberOfInquiries>
+              </SummaryInformation>
+              <ExistingContracts name="ExistingContracts" stitle="Действующие договора" title="ПОДРОБНАЯ ИНФОРМАЦИЯ – ДЕЙСТВУЮЩИЕ ДОГОВОРА">
+                <Contract ContractType="Рассроченный (кредит)" ContractTypeCode="Contract.Type .Instalment" Currency="KZT">
+                  <CodeOfContract title="Код контракта" value="1-000000054"/>
+                  <AgreementNumber title="Номер договора" value="1-000000054"/>
+                  <AgreementNumberGuarantee title="Номер договора банковской гарантии" value=""/>
+                  <TypeOfFounding id="2" title="Вид финансирования" value="Займ"/>
+                  <PurposeOfCredit id="09" title="Цель кредита" value="Прочие"/>
+                  <CurrencyCode title="Код валюты" value="KZT"/>
+                  <ContractStatus id="1" title="Статус договора" value="Стандартные кредиты"/>
+                  <DateOfApplication title="Дата заявки" value="04.03.2022"/>
+                  <DateOfCreditStart title="Дата начала срока действия договора" value="04.03.2022"/>
+                  <DateOfCreditEnd title="Дата окончания срока действия договора" value="04.07.2022"/>
+                  <DateOfRealRepayment title="Дата фактического завершения" value="-"/>
+                  <DateAgreementGuarantee title="Дата договора банковской гарантии/поручительства" value="-"/>
+                  <GuaranteeEvent title="Обстоятельство (событие) прекращения обязательства банка" value="-"/>
+                  <LastUpdate title="Информация по состоянию на" value="10.03.2022"/>
+                  <Collateral>
+                    <TypeOfGuarantee title="Вид обеспечения" value="Другие способы обеспечения"/>
+                    <ValueOfGuarantee title="Стоимость обеспечения" value="0,00 KZT"/>
+                    <TypeOfValueOfGuarantee title="Вид стоимости обеспечения" value="Внутреняя оценка"/>
+                    <AdditionalInformation title="" value=""/>
+                    <PlaceOfGuarantee title="" value=""/>
+                    <TypeOfCollateral title="Вид залога" value=""/>
+                    <CollateralStatus title="Cтатус залога" value=""/>
+                    <CollateralName title="Наименование залога" value=""/>
+                  </Collateral>
+                  <ClassificationOfContract title="Классификация договора" value="Стандартный"/>
+                  <TotalAmount title="Общая сумма кредита/валюта" value="50 000,00 KZT"/>
+                  <Amount title="Использованная сумма" value=""/>
+                  <CreditUsage id="" title="" value=""/>
+                  <ResidualAmount title="Использованная сумма (подлежащая погашению)" value=""/>
+                  <CreditLimit title="Сумма кредитного лимита" value=""/>
+                  <NumberOfOutstandingInstalments title="Кол-во непогашенных (предстоящих)  платежей" value="4"/>
+                  <NumberOfInstalments title="Общее количество платежей" value="4"/>
+                  <OutstandingAmount title="Непогашенная сумма по кредиту" value="50 242,00 KZT"/>
+                  <PeriodicityOfPayments id="2" title="Периодичность платежей" value="Ежемесячные платежи -30 дней"/>
+                  <MethodOfPayments id="1" title="Форма расчёта" value="Прямое дебетование банковского счета"/>
+                  <NumberOfOverdueInstalments title="Количество дней просрочки" value="0"/>
+                  <OverdueAmount title="Сумма просроченных взносов" value="0,00 KZT"/>
+                  <MonthlyInstalmentAmount title="Сумма периодического платежа" value="13 290,89 KZT"/>
+                  <InterestRate title="Процентная ставка" value=""/>
+                  <SubjectRole number="1" title="Роль субъекта" value="Заёмщик"/>
+                  <FinancialInstitution id="755" title="Источник информации (Кредитор)" value="Товарищество с ограниченной ответственностью &quot;МФО Payintech&quot;"/>
+                  <SpecialRelationship title="Признак связанности с банком особыми отношениями" value=""/>
+                  <AnnualEffectiveRate title="Годовая эффективная ставка вознаграждения" value="34.00"/>
+                  <NominalRate title="Номинальная ставка вознаграждения" value="30.00"/>
+                  <AmountProvisions title="Размер провизии" value=""/>
+                  <LoanAccount title="Ссудный счет" value=""/>
+                  <GracePrincipal title="Льготный период по основному долгу" value=""/>
+                  <GracePay title="Льготный период по вознаграждению" value=""/>
+                  <PlaceOfDisbursement id="" title="Место освоения кредита" value=""/>
+                  <PaymentsCalendar>
+                    <Year title="2022">
+                      <Payment fine="" number="1" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="2" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="-" number="3" overdue="0" penalty="-" title="Март" value="0"/>
+                      <Payment fine="" number="4" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="5" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="6" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="7" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="8" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="9" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="10" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="11" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="12" overdue="" penalty="" title="" value=""/>
+                    </Year>
+                  </PaymentsCalendar>
+                  <ContractThirdParty title="Наименование цессионария" value=""/>
+                  <ParentContractCode title="Номер родительского контракта" value=""/>
+                  <ParentProvider id="" title="Поставщик родительского контракта"/>
+                  <ParentContractStatus id="" title="Статус родительского контракта" value=""/>
+                  <ParentOperationDate title="Дата операции в родительском процессе" value="-"/>
+                  <Fine title="Пеня" value=""/>
+                  <Penalty title="Штраф" value=""/>
+                  <BranchLocation title="Местонахождение филиала" value=""/>
+                  <ProlongationCount title="Кол-во пролонгаций" value=""/>
+                  <NumberOfTransactions title="Количество транзакций" value=""/>
+                  <InstalmentAmount title="Сумма периодического платежа" value=""/>
+                  <ActualDate title="Дата фактической выдачи" value="-"/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="10.03.2022"/>
+                  <NumberOfOverdueInstalmentsMax title="Максимальное количество дней просрочки с начала действия договора" value="0"/>
+                  <NumberOfOverdueInstalmentsMaxDate title="Дата актуальности информации" value="-"/>
+                  <NumberOfOverdueInstalmentsMaxAmount title="Сумма просроченных взносов" value="0"/>
+                  <OverdueAmountMax title="Максимальная сумма просроченных взносов с начала действия договора" value="0"/>
+                  <OverdueAmountMaxDate title="Дата актуальности информации" value="-"/>
+                  <OverdueAmountMaxCount title="Количество дней просрочки" value="0"/>
+                  <CreditObject id="10" title="Объект кредитования" value="Прочие"/>
+                  <InterconnectedSubjects name="InterconnectedSubjects" title="СВЯЗАННЫЕ ОБЬЕКТЫ (2-Я ФАЗА)"/>
+                  <Schema title="Схема контракта" value=""/>
+                </Contract>
+              </ExistingContracts>
+              <TerminatedContracts name="TerminatedContracts" stitle="Завершенные договора" title="ПОДРОБНАЯ ИНФОРМАЦИЯ – ЗАВЕРШЕННЫЕ КОНТРАКТЫ">
+                <Contract ContractType="Рассроченный (кредит)" ContractTypeCode="Contract.Type .Instalment" Currency="KZT">
+                  <CodeOfContract title="Код контракта" value="3207991002599074"/>
+                  <AgreementNumber title="Номер договора" value="3207991002599074"/>
+                  <AgreementNumberGuarantee title="Номер договора банковской гарантии" value=""/>
+                  <TypeOfFounding id="2" title="Вид финансирования" value="Займ"/>
+                  <PurposeOfCredit id="09" title="Цель кредита" value="Прочие"/>
+                  <CurrencyCode title="Код валюты" value="KZT"/>
+                  <ContractStatus id="1" title="Статус договора" value="Стандартные кредиты"/>
+                  <DateOfApplication title="Дата заявки" value="05.06.2009"/>
+                  <DateOfCreditStart title="Дата начала срока действия договора" value="05.06.2009"/>
+                  <DateOfCreditEnd title="Дата окончания срока действия договора" value="15.09.2010"/>
+                  <DateOfRealRepayment title="Дата фактического завершения" value="05.12.2018"/>
+                  <DateAgreementGuarantee title="Дата договора банковской гарантии/поручительства" value="-"/>
+                  <GuaranteeEvent title="Обстоятельство (событие) прекращения обязательства банка" value="-"/>
+                  <LastUpdate title="Информация по состоянию на" value="06.12.2018"/>
+                  <Collateral>
+                    <TypeOfGuarantee title="Вид обеспечения" value="Бланковые"/>
+                    <ValueOfGuarantee title="Стоимость обеспечения" value="0,00 KZT"/>
+                    <TypeOfValueOfGuarantee title="Вид стоимости обеспечения" value="Внутреняя оценка"/>
+                    <AdditionalInformation title="" value=""/>
+                    <PlaceOfGuarantee title="" value=""/>
+                    <TypeOfCollateral title="Вид залога" value=""/>
+                    <CollateralStatus title="Cтатус залога" value=""/>
+                    <CollateralName title="Наименование залога" value=""/>
+                  </Collateral>
+                  <ClassificationOfContract title="Классификация договора" value="Однородный"/>
+                  <TotalAmount title="Общая сумма кредита/валюта" value="650 000,00 KZT"/>
+                  <Amount title="Использованная сумма" value=""/>
+                  <CreditUsage id="" title="" value=""/>
+                  <ResidualAmount title="Использованная сумма (подлежащая погашению)" value=""/>
+                  <CreditLimit title="Сумма кредитного лимита" value=""/>
+                  <NumberOfOutstandingInstalments title="Кол-во непогашенных (предстоящих)  платежей" value="0"/>
+                  <NumberOfInstalments title="Общее количество платежей" value="0"/>
+                  <OutstandingAmount title="Непогашенная сумма по кредиту" value="0,00 KZT"/>
+                  <PeriodicityOfPayments id="2" title="Периодичность платежей" value="Ежемесячные платежи -30 дней"/>
+                  <MethodOfPayments id="1" title="Форма расчёта" value="Прямое дебетование банковского счета"/>
+                  <NumberOfOverdueInstalments title="Количество дней просрочки" value="0"/>
+                  <OverdueAmount title="Сумма просроченных взносов" value="0,00 KZT"/>
+                  <MonthlyInstalmentAmount title="Сумма периодического платежа" value="0,00 KZT"/>
+                  <InterestRate title="Процентная ставка" value=""/>
+                  <SubjectRole number="1" title="Роль субъекта" value="Заёмщик"/>
+                  <FinancialInstitution id="113" title="Источник информации (Кредитор)" value="АО &quot;Народный Банк Казахстана&quot;"/>
+                  <SpecialRelationship title="Признак связанности с банком особыми отношениями" value=""/>
+                  <AnnualEffectiveRate title="Годовая эффективная ставка вознаграждения" value=""/>
+                  <NominalRate title="Номинальная ставка вознаграждения" value=""/>
+                  <AmountProvisions title="Размер провизии" value=""/>
+                  <LoanAccount title="Ссудный счет" value=""/>
+                  <GracePrincipal title="Льготный период по основному долгу" value=""/>
+                  <GracePay title="Льготный период по вознаграждению" value=""/>
+                  <PlaceOfDisbursement id="" title="Место освоения кредита" value=""/>
+                  <PaymentsCalendar>
+                    <Year title="2016">
+                      <Payment fine="" number="1" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="2" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="3" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="4" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="5" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="6" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="7" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="8" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="9" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="10" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="11" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="-" number="12" overdue="253 470,71 KZT" penalty="-" title="Декабрь" value="2298"/>
+                    </Year>
+                    <Year title="2017">
+                      <Payment fine="-" number="1" overdue="253 470,71 KZT" penalty="-" title="Январь" value="2326"/>
+                      <Payment fine="-" number="2" overdue="233 470,71 KZT" penalty="-" title="Февраль" value="2354"/>
+                      <Payment fine="-" number="3" overdue="233 470,71 KZT" penalty="-" title="Март" value="2389"/>
+                      <Payment fine="-" number="4" overdue="223 470,71 KZT" penalty="-" title="Апрель" value="2417"/>
+                      <Payment fine="-" number="5" overdue="223 470,71 KZT" penalty="-" title="Май" value="2445"/>
+                      <Payment fine="-" number="6" overdue="193 470,71 KZT" penalty="-" title="Июнь" value="2480"/>
+                      <Payment fine="-" number="7" overdue="183 470,71 KZT" penalty="-" title="Июль" value="2508"/>
+                      <Payment fine="-" number="8" overdue="183 470,71 KZT" penalty="-" title="Август" value="2541"/>
+                      <Payment fine="-" number="9" overdue="173 470,71 KZT" penalty="-" title="Сентябрь" value="2571"/>
+                      <Payment fine="-" number="10" overdue="173 470,71 KZT" penalty="-" title="Октябрь" value="2599"/>
+                      <Payment fine="-" number="11" overdue="153 470,71 KZT" penalty="-" title="Ноябрь" value="2633"/>
+                      <Payment fine="-" number="12" overdue="133 470,71 KZT" penalty="-" title="Декабрь" value="2661"/>
+                    </Year>
+                    <Year title="2018">
+                      <Payment fine="-" number="1" overdue="113 470,71 KZT" penalty="-" title="Январь" value="2690"/>
+                      <Payment fine="-" number="2" overdue="103 470,71 KZT" penalty="-" title="Февраль" value="2718"/>
+                      <Payment fine="-" number="3" overdue="93 470,71 KZT" penalty="-" title="Март" value="2753"/>
+                      <Payment fine="-" number="4" overdue="93 470,71 KZT" penalty="-" title="Апрель" value="2781"/>
+                      <Payment fine="-" number="5" overdue="73 470,71 KZT" penalty="-" title="Май" value="2815"/>
+                      <Payment fine="-" number="6" overdue="73 470,71 KZT" penalty="-" title="Июнь" value="2844"/>
+                      <Payment fine="-" number="7" overdue="63 470,71 KZT" penalty="-" title="Июль" value="2871"/>
+                      <Payment fine="-" number="8" overdue="63 470,71 KZT" penalty="-" title="Август" value="2906"/>
+                      <Payment fine="-" number="9" overdue="63 470,71 KZT" penalty="-" title="Сентябрь" value="2935"/>
+                      <Payment fine="-" number="10" overdue="33 470,71 KZT" penalty="-" title="Октябрь" value="2963"/>
+                      <Payment fine="-" number="11" overdue="33 470,71 KZT" penalty="-" title="Ноябрь" value="2998"/>
+                      <Payment fine="" number="12" overdue="" penalty="" title="" value=""/>
+                    </Year>
+                  </PaymentsCalendar>
+                  <ContractThirdParty title="Наименование цессионария" value=""/>
+                  <ParentContractCode title="Номер родительского контракта" value=""/>
+                  <ParentProvider id="" title="Поставщик родительского контракта"/>
+                  <ParentContractStatus id="" title="Статус родительского контракта" value=""/>
+                  <ParentOperationDate title="Дата операции в родительском процессе" value="-"/>
+                  <Fine title="Пеня" value=""/>
+                  <Penalty title="Штраф" value=""/>
+                  <BranchLocation title="Местонахождение филиала" value=""/>
+                  <ProlongationCount title="Кол-во пролонгаций" value=""/>
+                  <NumberOfTransactions title="Количество транзакций" value=""/>
+                  <InstalmentAmount title="Сумма периодического платежа" value=""/>
+                  <ActualDate title="Дата фактической выдачи" value="-"/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="12.12.2018"/>
+                  <NumberOfOverdueInstalmentsMax title="Максимальное количество дней просрочки с начала действия договора" value="2998"/>
+                  <NumberOfOverdueInstalmentsMaxDate title="Дата актуальности информации" value="29.11.2018"/>
+                  <NumberOfOverdueInstalmentsMaxAmount title="Сумма просроченных взносов" value="33 470,71 KZT"/>
+                  <OverdueAmountMax title="Максимальная сумма просроченных взносов с начала действия договора" value="627 635,68 KZT"/>
+                  <OverdueAmountMaxDate title="Дата актуальности информации" value="30.03.2011"/>
+                  <OverdueAmountMaxCount title="Количество дней просрочки" value="388"/>
+                  <CreditObject id="10" title="Объект кредитования" value="Прочие"/>
+                  <InterconnectedSubjects name="InterconnectedSubjects" title="СВЯЗАННЫЕ ОБЬЕКТЫ (2-Я ФАЗА)"/>
+                  <Schema title="Схема контракта" value=""/>
+                  <Rehabilitation>
+                    <StatusRehabilitation id="2" title="Статус реабилитации" value="Реабилитирован"/>
+                    <DateReabilitate title="Дата, на которую присвоен статус реабилитации" value="05.12.2019"/>
+                    <CalcDate title="Дата присвоения статуса реабилитации" value="09.04.2021"/>
+                  </Rehabilitation>
+                </Contract>
+                <Contract ContractType="Рассроченный (кредит)" ContractTypeCode="Contract.Type .Instalment" Currency="KZT">
+                  <CodeOfContract title="Код контракта" value="200323000634"/>
+                  <AgreementNumber title="Номер договора" value="200323000634"/>
+                  <AgreementNumberGuarantee title="Номер договора банковской гарантии" value=""/>
+                  <TypeOfFounding id="2" title="Вид финансирования" value="Займ"/>
+                  <PurposeOfCredit id="09" title="Цель кредита" value="Прочие"/>
+                  <CurrencyCode title="Код валюты" value="KZT"/>
+                  <ContractStatus id="1" title="Статус договора" value="Стандартные кредиты"/>
+                  <DateOfApplication title="Дата заявки" value="23.03.2020"/>
+                  <DateOfCreditStart title="Дата начала срока действия договора" value="23.03.2020"/>
+                  <DateOfCreditEnd title="Дата окончания срока действия договора" value="17.04.2020"/>
+                  <DateOfRealRepayment title="Дата фактического завершения" value="09.06.2020"/>
+                  <DateAgreementGuarantee title="Дата договора банковской гарантии/поручительства" value="-"/>
+                  <GuaranteeEvent title="Обстоятельство (событие) прекращения обязательства банка" value="-"/>
+                  <LastUpdate title="Информация по состоянию на" value="09.06.2020"/>
+                  <Collateral>
+                    <TypeOfGuarantee title="Вид обеспечения" value="Бланковые"/>
+                    <ValueOfGuarantee title="Стоимость обеспечения" value="0,00 KZT"/>
+                    <TypeOfValueOfGuarantee title="Вид стоимости обеспечения" value="Внутреняя оценка"/>
+                    <AdditionalInformation title="" value=""/>
+                    <PlaceOfGuarantee title="" value=""/>
+                    <TypeOfCollateral title="Вид залога" value=""/>
+                    <CollateralStatus title="Cтатус залога" value=""/>
+                    <CollateralName title="Наименование залога" value=""/>
+                  </Collateral>
+                  <ClassificationOfContract title="Классификация договора" value="Стандартный"/>
+                  <TotalAmount title="Общая сумма кредита/валюта" value="50 000,00 KZT"/>
+                  <Amount title="Использованная сумма" value=""/>
+                  <CreditUsage id="" title="" value=""/>
+                  <ResidualAmount title="Использованная сумма (подлежащая погашению)" value=""/>
+                  <CreditLimit title="Сумма кредитного лимита" value=""/>
+                  <NumberOfOutstandingInstalments title="Кол-во непогашенных (предстоящих)  платежей" value="0"/>
+                  <NumberOfInstalments title="Общее количество платежей" value="1"/>
+                  <OutstandingAmount title="Непогашенная сумма по кредиту" value="0,00 KZT"/>
+                  <PeriodicityOfPayments id="10" title="Периодичность платежей" value="Платежи с нерегулярной периодичностью"/>
+                  <MethodOfPayments id="1" title="Форма расчёта" value="Прямое дебетование банковского счета"/>
+                  <NumberOfOverdueInstalments title="Количество дней просрочки" value="0"/>
+                  <OverdueAmount title="Сумма просроченных взносов" value="0,00 KZT"/>
+                  <MonthlyInstalmentAmount title="Сумма периодического платежа" value="0,00 KZT"/>
+                  <InterestRate title="Процентная ставка" value=""/>
+                  <SubjectRole number="1" title="Роль субъекта" value="Заёмщик"/>
+                  <FinancialInstitution id="255" title="Источник информации (Кредитор)" value="ТОО «Микрофинансовая организация «Lending and Financy technologies»"/>
+                  <SpecialRelationship title="Признак связанности с банком особыми отношениями" value="Нет"/>
+                  <AnnualEffectiveRate title="Годовая эффективная ставка вознаграждения" value="4508.60"/>
+                  <NominalRate title="Номинальная ставка вознаграждения" value="4508.60"/>
+                  <AmountProvisions title="Размер провизии" value="0.00"/>
+                  <LoanAccount title="Ссудный счет" value=""/>
+                  <GracePrincipal title="Льготный период по основному долгу" value=""/>
+                  <GracePay title="Льготный период по вознаграждению" value=""/>
+                  <PlaceOfDisbursement id="675" title="Место освоения кредита" value="Алматы"/>
+                  <PaymentsCalendar>
+                    <Year title="2020">
+                      <Payment fine="" number="1" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="2" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="0.00" number="3" overdue="0" penalty="0.00" title="Март" value="0"/>
+                      <Payment fine="0.00" number="4" overdue="65 000,00 KZT" penalty="0.00" title="Апрель" value="11"/>
+                      <Payment fine="651,63 KZT" number="5" overdue="65 651,63 KZT" penalty="0.00" title="Май" value="26"/>
+                      <Payment fine="0.00" number="6" overdue="0" penalty="0.00" title="Июнь" value="0"/>
+                      <Payment fine="" number="7" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="8" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="9" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="10" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="11" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="12" overdue="" penalty="" title="" value=""/>
+                    </Year>
+                  </PaymentsCalendar>
+                  <ContractThirdParty title="Наименование цессионария" value=""/>
+                  <ParentContractCode title="Номер родительского контракта" value=""/>
+                  <ParentProvider id="" title="Поставщик родительского контракта"/>
+                  <ParentContractStatus id="" title="Статус родительского контракта" value=""/>
+                  <ParentOperationDate title="Дата операции в родительском процессе" value="-"/>
+                  <Fine title="Пеня" value="0,00 KZT"/>
+                  <Penalty title="Штраф" value="0,00 KZT"/>
+                  <BranchLocation title="Местонахождение филиала" value=""/>
+                  <ProlongationCount title="Кол-во пролонгаций" value="0"/>
+                  <NumberOfTransactions title="Количество транзакций" value=""/>
+                  <InstalmentAmount title="Сумма периодического платежа" value=""/>
+                  <ActualDate title="Дата фактической выдачи" value="-"/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="09.06.2020"/>
+                  <NumberOfOverdueInstalmentsMax title="Максимальное количество дней просрочки с начала действия договора" value="26"/>
+                  <NumberOfOverdueInstalmentsMaxDate title="Дата актуальности информации" value="13.05.2020"/>
+                  <NumberOfOverdueInstalmentsMaxAmount title="Сумма просроченных взносов" value="65 651,63 KZT"/>
+                  <OverdueAmountMax title="Максимальная сумма просроченных взносов с начала действия договора" value="65 651,63 KZT"/>
+                  <OverdueAmountMaxDate title="Дата актуальности информации" value="13.05.2020"/>
+                  <OverdueAmountMaxCount title="Количество дней просрочки" value="26"/>
+                  <CreditObject id="10" title="Объект кредитования" value="Прочие"/>
+                  <InterconnectedSubjects name="InterconnectedSubjects" title="СВЯЗАННЫЕ ОБЬЕКТЫ (2-Я ФАЗА)"/>
+                  <Schema title="Схема контракта" value=""/>
+                </Contract>
+                <Contract ContractType="Рассроченный (кредит)" ContractTypeCode="Contract.Type .Instalment" Currency="KZT">
+                  <CodeOfContract title="Код контракта" value="201912150917"/>
+                  <AgreementNumber title="Номер договора" value="201912150917"/>
+                  <AgreementNumberGuarantee title="Номер договора банковской гарантии" value=""/>
+                  <TypeOfFounding id="2" title="Вид финансирования" value="Займ"/>
+                  <PurposeOfCredit id="09" title="Цель кредита" value="Прочие"/>
+                  <CurrencyCode title="Код валюты" value="KZT"/>
+                  <ContractStatus id="1" title="Статус договора" value="Стандартные кредиты"/>
+                  <DateOfApplication title="Дата заявки" value="15.12.2019"/>
+                  <DateOfCreditStart title="Дата начала срока действия договора" value="15.12.2019"/>
+                  <DateOfCreditEnd title="Дата окончания срока действия договора" value="11.02.2020"/>
+                  <DateOfRealRepayment title="Дата фактического завершения" value="22.02.2021"/>
+                  <DateAgreementGuarantee title="Дата договора банковской гарантии/поручительства" value="-"/>
+                  <GuaranteeEvent title="Обстоятельство (событие) прекращения обязательства банка" value="-"/>
+                  <LastUpdate title="Информация по состоянию на" value="22.02.2021"/>
+                  <Collateral>
+                    <TypeOfGuarantee title="Вид обеспечения" value="Бланковые"/>
+                    <ValueOfGuarantee title="Стоимость обеспечения" value="0,00 KZT"/>
+                    <TypeOfValueOfGuarantee title="Вид стоимости обеспечения" value="Внутреняя оценка"/>
+                    <AdditionalInformation title="" value=""/>
+                    <PlaceOfGuarantee title="" value=""/>
+                    <TypeOfCollateral title="Вид залога" value=""/>
+                    <CollateralStatus title="Cтатус залога" value=""/>
+                    <CollateralName title="Наименование залога" value=""/>
+                  </Collateral>
+                  <ClassificationOfContract title="Классификация договора" value="Стандартный"/>
+                  <TotalAmount title="Общая сумма кредита/валюта" value="50 000,00 KZT"/>
+                  <Amount title="Использованная сумма" value=""/>
+                  <CreditUsage id="" title="" value=""/>
+                  <ResidualAmount title="Использованная сумма (подлежащая погашению)" value=""/>
+                  <CreditLimit title="Сумма кредитного лимита" value=""/>
+                  <NumberOfOutstandingInstalments title="Кол-во непогашенных (предстоящих)  платежей" value="0"/>
+                  <NumberOfInstalments title="Общее количество платежей" value="1"/>
+                  <OutstandingAmount title="Непогашенная сумма по кредиту" value="0,00 KZT"/>
+                  <PeriodicityOfPayments id="10" title="Периодичность платежей" value="Платежи с нерегулярной периодичностью"/>
+                  <MethodOfPayments id="1" title="Форма расчёта" value="Прямое дебетование банковского счета"/>
+                  <NumberOfOverdueInstalments title="Количество дней просрочки" value="0"/>
+                  <OverdueAmount title="Сумма просроченных взносов" value="0,00 KZT"/>
+                  <MonthlyInstalmentAmount title="Сумма периодического платежа" value="0,00 KZT"/>
+                  <InterestRate title="Процентная ставка" value=""/>
+                  <SubjectRole number="1" title="Роль субъекта" value="Заёмщик"/>
+                  <FinancialInstitution id="311" title="Источник информации (Кредитор)" value="ТОО &quot;Деньги населению&quot;"/>
+                  <SpecialRelationship title="Признак связанности с банком особыми отношениями" value="Нет"/>
+                  <AnnualEffectiveRate title="Годовая эффективная ставка вознаграждения" value="15.60"/>
+                  <NominalRate title="Номинальная ставка вознаграждения" value="15.60"/>
+                  <AmountProvisions title="Размер провизии" value="0.00"/>
+                  <LoanAccount title="Ссудный счет" value=""/>
+                  <GracePrincipal title="Льготный период по основному долгу" value=""/>
+                  <GracePay title="Льготный период по вознаграждению" value=""/>
+                  <PlaceOfDisbursement id="675" title="Место освоения кредита" value="Алматы"/>
+                  <PaymentsCalendar>
+                    <Year title="2019">
+                      <Payment fine="" number="1" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="2" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="3" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="4" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="5" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="6" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="7" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="8" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="9" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="10" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="11" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="-" number="12" overdue="-" penalty="-" title="Декабрь" value="-"/>
+                    </Year>
+                    <Year title="2020">
+                      <Payment fine="-" number="1" overdue="-" penalty="-" title="Январь" value="-"/>
+                      <Payment fine="-" number="2" overdue="-" penalty="-" title="Февраль" value="-"/>
+                      <Payment fine="-" number="3" overdue="-" penalty="-" title="Март" value="-"/>
+                      <Payment fine="-" number="4" overdue="-" penalty="-" title="Апрель" value="-"/>
+                      <Payment fine="-" number="5" overdue="-" penalty="-" title="Май" value="-"/>
+                      <Payment fine="-" number="6" overdue="-" penalty="-" title="Июнь" value="-"/>
+                      <Payment fine="-" number="7" overdue="-" penalty="-" title="Июль" value="-"/>
+                      <Payment fine="-" number="8" overdue="-" penalty="-" title="Август" value="-"/>
+                      <Payment fine="-" number="9" overdue="-" penalty="-" title="Сентябрь" value="-"/>
+                      <Payment fine="-" number="10" overdue="-" penalty="-" title="Октябрь" value="-"/>
+                      <Payment fine="-" number="11" overdue="-" penalty="-" title="Ноябрь" value="-"/>
+                      <Payment fine="-" number="12" overdue="-" penalty="-" title="Декабрь" value="-"/>
+                    </Year>
+                    <Year title="2021">
+                      <Payment fine="-" number="1" overdue="-" penalty="-" title="Январь" value="-"/>
+                      <Payment fine="0.00" number="2" overdue="0" penalty="0.00" title="Февраль" value="0"/>
+                      <Payment fine="" number="3" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="4" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="5" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="6" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="7" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="8" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="9" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="10" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="11" overdue="" penalty="" title="" value=""/>
+                      <Payment fine="" number="12" overdue="" penalty="" title="" value=""/>
+                    </Year>
+                  </PaymentsCalendar>
+                  <ContractThirdParty title="Наименование цессионария" value=""/>
+                  <ParentContractCode title="Номер родительского контракта" value=""/>
+                  <ParentProvider id="" title="Поставщик родительского контракта"/>
+                  <ParentContractStatus id="" title="Статус родительского контракта" value=""/>
+                  <ParentOperationDate title="Дата операции в родительском процессе" value="-"/>
+                  <Fine title="Пеня" value="0,00 KZT"/>
+                  <Penalty title="Штраф" value="0,00 KZT"/>
+                  <BranchLocation title="Местонахождение филиала" value=""/>
+                  <ProlongationCount title="Кол-во пролонгаций" value="1"/>
+                  <NumberOfTransactions title="Количество транзакций" value=""/>
+                  <InstalmentAmount title="Сумма периодического платежа" value=""/>
+                  <ActualDate title="Дата фактической выдачи" value="-"/>
+                  <DateOfInserted title="Дата получения сведений кред.бюро" value="22.02.2021"/>
+                  <NumberOfOverdueInstalmentsMax title="Максимальное количество дней просрочки с начала действия договора" value="0"/>
+                  <NumberOfOverdueInstalmentsMaxDate title="Дата актуальности информации" value="-"/>
+                  <NumberOfOverdueInstalmentsMaxAmount title="Сумма просроченных взносов" value="0"/>
+                  <OverdueAmountMax title="Максимальная сумма просроченных взносов с начала действия договора" value="0"/>
+                  <OverdueAmountMaxDate title="Дата актуальности информации" value="-"/>
+                  <OverdueAmountMaxCount title="Количество дней просрочки" value="0"/>
+                  <CreditObject id="10" title="Объект кредитования" value="Прочие"/>
+                  <InterconnectedSubjects name="InterconnectedSubjects" title="СВЯЗАННЫЕ ОБЬЕКТЫ (2-Я ФАЗА)"/>
+                  <Schema title="Схема контракта" value=""/>
+                </Contract>
+              </TerminatedContracts>
+              <ExistingApplications name="ExistingApplications" title="ПОДРОБНАЯ ИНФОРМАЦИЯ – ДЕЙСТВУЮЩИЕ ЗАЯВКИ"/>
+              <RejectedApplications name="RejectedApplications" title="ПОДРОБНАЯ ИНФОРМАЦИЯ – ОТКЛОНЕННЫЕ ЗАЯВКИ"/>
+              <WithdrawnApplications name="WithdrawnApplications" stitle="Отозванные договора" title="ПОДРОБНАЯ ИНФОРМАЦИЯ – ОТОЗВАННЫЕ ЗАЯВКИ"/>
+              <InterconnectedSubjects name="InterconnectedSubjects" title="СВЯЗАННЫЕ ОБЬЕКТЫ (2-Я ФАЗА)">
+                <InterconnectedSubject>
+                  <TypeOfLink title="Роль субъекта" value="Заёмщик"/>
+                  <SubjectCode title="Регистрационный ИД" value="3179540"/>
+                </InterconnectedSubject>
+                <InterconnectedSubject>
+                  <TypeOfLink title="Роль субъекта" value="Заёмщик"/>
+                  <SubjectCode title="Регистрационный ИД" value="3179540"/>
+                </InterconnectedSubject>
+                <InterconnectedSubject>
+                  <TypeOfLink title="Роль субъекта" value="Заёмщик"/>
+                  <SubjectCode title="Регистрационный ИД" value="3179540"/>
+                </InterconnectedSubject>
+                <InterconnectedSubject>
+                  <TypeOfLink title="Роль субъекта" value="Заёмщик"/>
+                  <SubjectCode title="Регистрационный ИД" value="3179540"/>
+                </InterconnectedSubject>
+                <InterconnectedSubject>
+                  <TypeOfLink title="Роль субъекта" value="Заёмщик"/>
+                  <SubjectCode title="Регистрационный ИД" value="3179540"/>
+                </InterconnectedSubject>
+                <InterconnectedSubject>
+                  <TypeOfLink title="Роль субъекта" value="Заёмщик"/>
+                  <SubjectCode title="Регистрационный ИД" value="3179540"/>
+                </InterconnectedSubject>
+                <InterconnectedSubject>
+                  <TypeOfLink title="Роль субъекта" value="Заёмщик"/>
+                  <SubjectCode title="Регистрационный ИД" value="3179540"/>
+                </InterconnectedSubject>
+              </InterconnectedSubjects>
+              <NumberOfQueries title="Количество произведенных участниками ПКБ запросов" value="7">
+                <DetailsQueries7days title="Детализация запросов за 7 дней"/>
+                <Days30 title="За 30 дней" value="2"/>
+                <Days90 title="За 90 дней" value="4"/>
+                <Days120 title="За 120 дней" value="4"/>
+                <Days180 title="За 180 дней" value="5"/>
+                <Days360 title="За 360 дней" value="7"/>
+              </NumberOfQueries>
+              <RelatedCompanies title="Аффилированность"/>
+              <PublicSources title="">
+                <QamqorList title="Розыск преступников, должников, без вести пропавших лиц Комитетом по правовой статистике и специальным учетам ГП РК">
+                  <Source title="Ссылка на источник" value="http://qamqor.gov.kz/portal/page/portal/POPageGroup/Services/SuRet"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро"/>
+                  <RefreshDate value="18.03.2022"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в списке преступников, должников, без вести пропавших лиц"/>
+                </QamqorList>
+                <KgdWanted title="Розыск Комитетом государственных доходов Министерства Финансов РК">
+                  <Source title="Ссылка на источник" value="http://kgd.gov.kz/ru/mobile-api/wanted"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро"/>
+                  <RefreshDate value="18.03.2022"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в списке Розыск Комитетом государственных доходов Министерства Финансов РК"/>
+                </KgdWanted>
+                <QamqorAlimony title="Розыск алиментщиков Комитетом по правовой статистике и специальным учетам ГП РК">
+                  <Source title="Ссылка на источник" value="http://qamqor.gov.kz/portal/page/portal/POPageGroup/Services/Alimony"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро"/>
+                  <RefreshDate value="28.02.2022"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в списке разыскиваемых алиментщиков Комитета по правовой статистике и специальным учетам ГП РК"/>
+                </QamqorAlimony>
+                <RNUGosZakup title="Реестр недобросовестных участников государственных закупок">
+                  <Source title="Ссылка на источник" value="https://goszakup.gov.kz/ru/registry/rnu"/>
+                  <RefreshDate title="Дата обновления сведений на источнике" value="2022-03-18 06:00:21.797"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро" value="2022-03-18 22:47:24.583"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в реестре недобросовестных участников государственных закупок"/>
+                  <Companies title="Компании"/>
+                </RNUGosZakup>
+                <FalseBusi title="Перечень налогоплательщиков, осуществивших лжепредпринимательскую деятельность">
+                  <Source title="Ссылка на источник" value="http://kgd.gov.kz/ru/services/taxpayer_search_unreliable/list"/>
+                  <RefreshDate title="Дата обновления сведений на источнике" value="2022-03-18 01:00:09.977"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро" value="2022-03-18 22:47:24.583"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в списке налогоплательщиков, осуществивших лжепредпринимательскую деятельность"/>
+                  <Companies title="Компании"/>
+                </FalseBusi>
+                <TerrorList title="Перечень организаций и лиц, связанных с финансированием терроризма и экстремизма">
+                  <Source title="Ссылка на источник" value="http://kfm.gov.kz/ru/the-list-of-organizations-and-individuals-associa/"/>
+                  <RefreshDate title="Дата обновления сведений на источнике" value="15.03.2022"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро" value="2022-03-18 22:47:24.583"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в списке организаций и лиц, связанных с финансированием терроризма и экстремизма"/>
+                </TerrorList>
+                <Areears title="Список плательщиков, имеющих задолженность по таможенным платежам, налогам и пеням, не погашенную в течение 4 месяцев со дня ее возникновения">
+                  <Source title="Ссылка на источник" value="https://data.egov.kz/datasets/view?index=01102016_zhylgy_kezenine_tuy"/>
+                  <RefreshDate title="Дата обновления сведений на источнике" value="2022-01-20 20:47:05.720"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро" value="2022-03-18 22:47:24.583"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в списке плательщиков, имеющих задолженность по таможенным платежам, налогам и пеням"/>
+                </Areears>
+                <Bankruptcy title="Списки несостоятельных должников/Список банкротов">
+                  <Source title="Ссылка на источник" value="https://data.egov.kz/datasets/view?index=darmensiz_boryshkerlerdin_tizi3"/>
+                  <RefreshDate title="Дата обновления сведений на источнике" value="2022-01-21 00:00:00.000"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро" value="2022-03-18 22:47:24.583"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в списке банкротов, в отношении которых решения суда о признании их банкротами вступили в законную силу"/>
+                  <Companies title="Компании"/>
+                </Bankruptcy>
+                <L150o10 title="Поиск в списке налогоплательщиков - ЮЛ, имеющих налоговую задолженность более 150 МРП и ИП, частных нотариусах, частных судебных исполнителях, адвокатах, профессиональных медиаторах, имеющих налоговую задолженность более 10 МРП, не погашенную в течение 4 месяцев со дня ее возникновения; агентов, имеющих налоговую задолженность по пенсионным взносам, обязательным профессиональным пенсионным взносам, не погашенную в срок более 6 месяцев.">
+                  <Source title="Ссылка на источник" value="https://kgd.gov.kz/ru/node/97568"/>
+                  <ActualDate title="Дата получения сведений кредитным бюро" value="2022-03-18 22:47:24.613"/>
+                  <RefreshDate title="Дата обновления сведений на источнике" value="2022-01-20 00:00:00.000"/>
+                  <Status id="2" title="Статус субъекта" value="Субъект не найден в списке о налогоплательщиках - ЮЛ, имеющих налоговую задолженность более 150 МРП и ИП, частных нотариусах, частных судебных исполнителях, адвокатах, профессиональных медиаторах, имеющих налоговую задолженность более 10 МРП, не погашенную в течение 4 месяцев со дня ее возникновения"/>
+                  <Companies title="Компании"/>
+                </L150o10>
+              </PublicSources>
+              <Sems/>
+              <RWA170 NotFoundText="Задолженность по займам, отнесенным к категории бланковых по виду обеспечения – информация не найдена" title="Задолженность по займам, отнесенным к категории бланковых по виду обеспечения">
+                <Contracts ContractsSumm="" title="Общая сумма задолженности"/>
+              </RWA170>
+              <Footer EndOfReport="КОНЕЦ КРЕДИТНОГО ОТЧЕТА" name="tblFooter">
+                <DateOfIssue title="Дата выдачи" value="18.03.2022 22:47:24"/>
+                <ContactInfo value="Первое кредитное бюро - Республика Казахстан, A05K8B4, г.Алматы, ул.Жибек жолы, дом 135, блок 2, 9 этаж, офис 2091. Тел.: +7 (727) 300 01 50, +7 (727) 300 01 80, +7 (727) 300 01 86, +7 (727) 300 01 89, +7 (727) 300 01 95. WhatsApp/Telegram +7 708 971 39 34/ Email: info@1cb.kz Сайт: www.1cb.kz"/>
+                <Contracts>
+                  <AdditionalInformation stitle="Дополнительная информация"/>
+                  <Balance stitle="Баланс"/>
+                  <Collaterals stitle="Залоги"/>
+                  <Contract stitle="Договор"/>
+                  <DaysOverdue stitle="Дни просрочки"/>
+                  <Payment stitle="Платежная дисциплина"/>
+                  <RelatedSubjects stitle="Связанные субьекты">
+                    <Documents stitle="Документы"/>
+                    <FIO stitle="ФИО/Наименование"/>
+                    <SubjectRole stitle="Роль субъекта"/>
+                  </RelatedSubjects>
+                  <Status stitle="Состояние"/>
+                  <TypeOfGuarantee stitle="Вид обеспечения"/>
+                  <ValueOfGuarantee stitle="Стоимость обеспечения"/>
+                  <ProlongationStartDate stitle="Дата пролонгации"/>
+                  <ProlongationEndDate stitle="Дата завершения пролонгации"/>
+                  <Collateral>
+                    <TypeOfGuarantee stitle="Вид обеспечения"/>
+                    <ValueOfGuarantee stitle="Стоимость обеспечения"/>
+                    <TypeOfValueOfGuarantee stitle="Вид стоимости обеспечения"/>
+                    <PlaceOfGuarantee stitle="Местоположение залога"/>
+                    <CollateralStatus stitle="Cтатус залога"/>
+                    <CollateralName stitle="Наименование залога"/>
+                    <TypeOfCollateral stitle="Вид залога"/>
+                  </Collateral>
+                </Contracts>
+                <FiveYearsWarning stitle="Получение кредитного отчета, не содержащего информацию по кредитам, по которым последняя информация получена ранее пяти лет с даты получения последней информации о Вас от соответствующего поставщика информации, будет возможно после 01 июля 2021 года в связи с техническими доработками. Приносим извинения за неудобство"/>
+                <AuthenticityWarning stitle="Внимание! Подлинность данного отчета можно проверить в мобильном приложении 1cb.kz в разделе проверка QR-кода."/>
+                <Footer stitle="© ТОО «Первое кредитное бюро». Все права защищены."/>
+                <ExistingContracts stitle="Действующие договора"/>
+                <TerminatedContracts stitle="Завершенные договора"/>
+                <WithdrawnApplications stitle="Отозванные договора"/>
+                <NoAddresses stitle="Нет данных об адресах субъекта"/>
+                <NoContacts stitle="Нет данных о контактах субъекта"/>
+                <Guarant stitle="Гарант"/>
+                <Borrower stitle="Заёмщик/Созаёмщик"/>
+                <SubjectRole stitle="Роль субъекта"/>
+                <NoDocuments stitle="Нет данных о документах субъекта"/>
+                <NoExistingContracts stitle="Субъект не имеет действующих договоров"/>
+                <NoNegativeStatus stitle=""/>
+                <NoTerminatedContracts stitle="Субьект не имеет завершенных договоров"/>
+                <NoTerminatedContractsDateLimit stitle="Субьект не имеет завершенных более 5 лет назад договоров"/>
+                <NoWithdrawnApplications stitle="Субьект не имеет отозванных договоров"/>
+                <TitleDetailedInformation stitle="Подробная информация"/>
+                <TitleAdditionalInformation stitle="Дополнительная информация"/>
+                <TitleLiabilities stitle="Обязательства">
+                  <ContractsNumber stitle="Количество"/>
+                  <ContractsPhase stitle="Фаза договора"/>
+                  <ContractStatus stitle="Статус договора"/>
+                  <OutstandingAmount stitle="Непогашенная сумма/валюта"/>
+                  <OverdueAmount stitle="Просроченная сумма/валюта"/>
+                  <NumberOfCreditLines title="Количество кредитных линии"/>
+                  <TotalFine title="Сумма пеней"/>
+                  <TotalPenalty title="Сумма штрафов"/>
+                </TitleLiabilities>
+                <InterconnectedSubjects>
+                  <TypeOfLink title="Роль субъекта"/>
+                  <SubjectCode title="ID субъекта"/>
+                  <SubjectName title="ФИО/Наименование"/>
+                  <SubjectRNN title="РНН"/>
+                  <SubjectIIN title="ИИН/БИН"/>
+                </InterconnectedSubjects>
+                <TitleSummaryInformation stitle="Общая информация"/>
+                <Contract stitle="Контракт"/>
+                <SubjectDetails2 stitle="Количество произведенных запросов"/>
+                <AmountOverdue stitle="Сумма просрочки"/>
+                <MaxOverdueAmount title="Сумма просроченных взносов"/>
+                <MaxOverdueCount title="Количество дней просрочки"/>
+                <PaymentsCalendar title="Платежная дисциплина за 24 месяца">
+                  <Description1 title="*« - » - Поставщик информации не  предоставил данные"/>
+                  <Description2 title="« 0 » - Просрочки отсутствуют"/>
+                </PaymentsCalendar>
+                <NoSubjects title="Данных по субъектам нет"/>
+                <NoViolations title="Данных по штрафам нет"/>
+                <InformationFromDB title="Раздел 1. Информация из БДКИ"/>
+                <InformationFromPS title="Раздел 2. Информация из ГБД и других источников"/>
+                <InformationFromPSS title="Раздел 2. Информация из дополнительных источников"/>
+                <InformationFromPSS3 title="Раздел 3. Информация из дополнительных источников"/>
+                <InformationFromPCR title="Раздел 2. Персональный кредитный рейтинг"/>
+                <InformationFromGDB title="Раздел 2. Сведения из государственных баз данных"/>
+                <Tranches title=""/>
+                <TestWarning title=""/>
+                <AdvCC title="Контролируй свою кредитную историю. 24/7"/>
+                <IncludingRehabilitation title="В том числе"/>
+              </Footer>
+            </Root>
+          </Result>
+        </CigResult>
+      </GetReportResult>
+    </GetReportResponse>
+  </S:Body>
+</S:Envelope>

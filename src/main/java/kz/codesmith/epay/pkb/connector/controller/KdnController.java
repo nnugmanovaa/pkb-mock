@@ -1,6 +1,7 @@
 package kz.codesmith.epay.pkb.connector.controller;
 
 import kz.codesmith.epay.pkb.connector.model.kdn.KdnRequest;
+import kz.codesmith.epay.pkb.connector.parser.XmlParser;
 import kz.codesmith.epay.pkb.connector.service.KdnService;
 import kz.codesmith.epay.pkb.connector.service.ReportClientService;
 import kz.codesmith.logger.Logged;
@@ -17,24 +18,18 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping(KdnController.PATH)
 public class KdnController {
-    public static final String PATH = "/kdn";
+    public static final String PATH = "/pkb";
 
     private final KdnService kdnService;
-    private final ReportClientService reportService;
+    private final XmlParser xmlParser;
 
-    @PutMapping
-    public ResponseEntity<?> getKdn(
-            @RequestBody KdnRequest kdnRequest
-    ) {
-        log.info("GET KDN parsed info, for {}", kdnRequest.getIin());
-        return ResponseEntity.ok(kdnService.getKdn(kdnRequest));
+    @GetMapping("/extended/{iin}/raw")
+    public ResponseEntity<String> getExtendedReportRaw(@PathVariable("iin") String iin) {
+        return ResponseEntity.ok(xmlParser.parseExtendedToString(iin));
     }
 
-    @PutMapping("/raw")
-    public ResponseEntity<String> getKdnRaw(
-        @RequestBody KdnRequest kdnRequest
-    ) {
-        log.info("GET KDN raw info, for {}", kdnRequest.getIin());
-        return ResponseEntity.ok(reportService.getKdnRaw(kdnRequest));
+    @GetMapping("/kdn/{iin}/raw")
+    public ResponseEntity<String> getKdnRaw(@PathVariable("iin") String iin) {
+        return ResponseEntity.ok(xmlParser.parseToString(iin));
     }
 }
